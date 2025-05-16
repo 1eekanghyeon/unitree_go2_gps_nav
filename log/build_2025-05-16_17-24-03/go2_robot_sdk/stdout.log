@@ -1,0 +1,147 @@
+running egg_info
+creating ../../build/go2_robot_sdk/go2_robot_sdk.egg-info
+writing ../../build/go2_robot_sdk/go2_robot_sdk.egg-info/PKG-INFO
+writing dependency_links to ../../build/go2_robot_sdk/go2_robot_sdk.egg-info/dependency_links.txt
+writing entry points to ../../build/go2_robot_sdk/go2_robot_sdk.egg-info/entry_points.txt
+writing requirements to ../../build/go2_robot_sdk/go2_robot_sdk.egg-info/requires.txt
+writing top-level names to ../../build/go2_robot_sdk/go2_robot_sdk.egg-info/top_level.txt
+writing manifest file '../../build/go2_robot_sdk/go2_robot_sdk.egg-info/SOURCES.txt'
+reading manifest file '../../build/go2_robot_sdk/go2_robot_sdk.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/go2_robot_sdk/go2_robot_sdk.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build
+creating /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib
+creating /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk
+copying go2_robot_sdk/imu_converter_node.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk
+copying go2_robot_sdk/tts.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk
+copying go2_robot_sdk/stt2.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk
+copying go2_robot_sdk/auto_datum_setter.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk
+copying go2_robot_sdk/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk
+copying go2_robot_sdk/lidar_to_point.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk
+copying go2_robot_sdk/stt.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk
+copying go2_robot_sdk/gps.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk
+copying go2_robot_sdk/go2_driver_node.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk
+creating /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/webrtc_driver.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/go2_lidar_decoder.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/unitree_auth.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/go2_math.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/go2_camerainfo.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/go2_func.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/util.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/encryption.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/constants.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+copying scripts/go2_constants.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts
+running install
+running install_lib
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk/imu_converter_node.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk/tts.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk/stt2.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk/auto_datum_setter.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk/lidar_to_point.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk/stt.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk/gps.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/go2_robot_sdk/go2_driver_node.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/webrtc_driver.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/go2_lidar_decoder.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/unitree_auth.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/go2_math.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/go2_camerainfo.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/go2_func.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/util.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/encryption.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/constants.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/build/lib/scripts/go2_constants.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk/imu_converter_node.py to imu_converter_node.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk/tts.py to tts.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk/stt2.py to stt2.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk/auto_datum_setter.py to auto_datum_setter.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk/lidar_to_point.py to lidar_to_point.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk/stt.py to stt.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk/gps.py to gps.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk/go2_driver_node.py to go2_driver_node.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/webrtc_driver.py to webrtc_driver.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/go2_lidar_decoder.py to go2_lidar_decoder.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/unitree_auth.py to unitree_auth.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/go2_math.py to go2_math.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/go2_camerainfo.py to go2_camerainfo.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/go2_func.py to go2_func.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/util.py to util.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/encryption.py to encryption.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/constants.py to constants.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/scripts/go2_constants.py to go2_constants.cpython-310.pyc
+running install_data
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/ament_index
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/ament_index/resource_index
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/ament_index/resource_index/packages
+copying resource/go2_robot_sdk -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/ament_index/resource_index/packages
+copying package.xml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/launch
+copying launch/webrtc_web.launch.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/launch
+copying launch/robot.launch.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/launch
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/urdf
+copying urdf/go2_with_realsense.urdf -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/urdf
+copying urdf/go2_on_steroids.urdf -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/urdf
+copying urdf/multi_go2.urdf -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/urdf
+copying urdf/go2.urdf -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/urdf
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/dae
+copying dae/calf_mirror.dae -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/dae
+copying dae/thigh_mirror.dae -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/dae
+copying dae/foot.dae -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/dae
+copying dae/calf.dae -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/dae
+copying dae/base.dae -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/dae
+copying dae/hip.dae -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/dae
+copying dae/thigh.dae -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/dae
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/meshes
+copying meshes/right_d_camera.STL -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/meshes
+copying meshes/front_d_camera.STL -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/meshes
+copying meshes/left_d_camera.STL -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/meshes
+copying meshes/lidar_link.STL -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/meshes
+copying meshes/base.STL -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/meshes
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/hiwi2.posegraph:Zone.Identifier -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/twist_mux.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/cyclonedds_config.rviz -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/navsat_config.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/hiwi2.pgm:Zone.Identifier -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/joystick.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/ekf_global.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/hiwi2.data:Zone.Identifier -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/hiwi2.yaml:Zone.Identifier -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/mapper_params_online_async.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/multi_robot_conf.rviz -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/ekf_local.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/single_robot_conf.rviz -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+copying config/nav2_params.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/config
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/calibration
+copying calibration/front_camera.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/calibration
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib
+copying external_lib/libvoxel.wasm -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib/aioice
+copying external_lib/aioice/src/aioice/py.typed -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib/aioice
+copying external_lib/aioice/src/aioice/ice.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib/aioice
+copying external_lib/aioice/src/aioice/mdns.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib/aioice
+copying external_lib/aioice/src/aioice/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib/aioice
+copying external_lib/aioice/src/aioice/candidate.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib/aioice
+copying external_lib/aioice/src/aioice/stun.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib/aioice
+copying external_lib/aioice/src/aioice/turn.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib/aioice
+copying external_lib/aioice/src/aioice/utils.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/share/go2_robot_sdk/external_lib/aioice
+running install_egg_info
+Copying ../../build/go2_robot_sdk/go2_robot_sdk.egg-info to /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/python3.10/site-packages/go2_robot_sdk-0.0.0-py3.10.egg-info
+running install_scripts
+Installing go2_driver_node script to /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/go2_robot_sdk
+Installing gps_node script to /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/go2_robot_sdk
+Installing imu_converter_node script to /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/go2_robot_sdk
+Installing lidar_to_pointcloud script to /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/go2_robot_sdk
+Installing stt_node script to /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/go2_robot_sdk
+Installing tts_node script to /home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk/lib/go2_robot_sdk
+writing list of installed files to '/home/hiwilab/Project/DOG/ros2_ws/build/go2_robot_sdk/install.log'

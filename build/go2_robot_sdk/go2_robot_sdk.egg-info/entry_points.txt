@@ -1,0 +1,8 @@
+[console_scripts]
+go2_driver_node = go2_robot_sdk.go2_driver_node:main
+gps_node = go2_robot_sdk.gps:main
+imu_converter_node = go2_robot_sdk.imu_converter_node:main
+lidar_to_pointcloud = go2_robot_sdk.lidar_to_point:main
+stt_node = go2_robot_sdk.stt:main
+tts_node = go2_robot_sdk.tts:main
+

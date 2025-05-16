@@ -1,0 +1,5 @@
+/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:msg/Go2Cmd.idl
+/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:msg/Go2State.idl
+/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:msg/Go2Move.idl
+/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:msg/Go2RpyCmd.idl
+/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces/rosidl_adapter/go2_interfaces:msg/IMU.idl

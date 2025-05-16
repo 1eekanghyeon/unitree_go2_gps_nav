@@ -1,0 +1,40 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from unitree_go/msg/VoxelMapCompressed.msg
+// generated code does not contain a copyright notice
+
+
+module unitree_go {
+  module msg {
+    typedef double double__3[3];
+    typedef int16 int16__3[3];
+    @verbatim (language="comment", text=
+      "Timestamp (in seconds since epoch)")
+    struct VoxelMapCompressed {
+      double stamp;
+
+      @verbatim (language="comment", text=
+        "Frame ID for the coordinate frame")
+      string frame_id;
+
+      @verbatim (language="comment", text=
+        "Resolution of the voxel map")
+      double resolution;
+
+      @verbatim (language="comment", text=
+        "Origin of the voxel map (x, y, z)")
+      double__3 origin;
+
+      @verbatim (language="comment", text=
+        "Width of the voxel map in each dimension (x, y, z)")
+      int16__3 width;
+
+      @verbatim (language="comment", text=
+        "Source size of the compressed data")
+      uint64 src_size;
+
+      @verbatim (language="comment", text=
+        "Compressed voxel data")
+      sequence<uint8> data;
+    };
+  };
+};

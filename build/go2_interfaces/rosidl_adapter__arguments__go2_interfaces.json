@@ -1,0 +1,10 @@
+{
+  "package_name": "go2_interfaces",
+  "non_idl_tuples": [
+    "/home/hiwilab/Project/DOG/ros2_ws/src/go2_interfaces:msg/Go2Cmd.msg",
+    "/home/hiwilab/Project/DOG/ros2_ws/src/go2_interfaces:msg/Go2State.msg",
+    "/home/hiwilab/Project/DOG/ros2_ws/src/go2_interfaces:msg/Go2Move.msg",
+    "/home/hiwilab/Project/DOG/ros2_ws/src/go2_interfaces:msg/Go2RpyCmd.msg",
+    "/home/hiwilab/Project/DOG/ros2_ws/src/go2_interfaces:msg/IMU.msg"
+  ]
+}

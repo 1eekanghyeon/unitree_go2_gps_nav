@@ -1,0 +1,42 @@
+running egg_info
+creating ../../build/go2_gps_nav/go2_gps_nav.egg-info
+writing ../../build/go2_gps_nav/go2_gps_nav.egg-info/PKG-INFO
+writing dependency_links to ../../build/go2_gps_nav/go2_gps_nav.egg-info/dependency_links.txt
+writing entry points to ../../build/go2_gps_nav/go2_gps_nav.egg-info/entry_points.txt
+writing requirements to ../../build/go2_gps_nav/go2_gps_nav.egg-info/requires.txt
+writing top-level names to ../../build/go2_gps_nav/go2_gps_nav.egg-info/top_level.txt
+writing manifest file '../../build/go2_gps_nav/go2_gps_nav.egg-info/SOURCES.txt'
+reading manifest file '../../build/go2_gps_nav/go2_gps_nav.egg-info/SOURCES.txt'
+writing manifest file '../../build/go2_gps_nav/go2_gps_nav.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/hiwilab/Project/DOG/ros2_ws/build/go2_gps_nav/build
+creating /home/hiwilab/Project/DOG/ros2_ws/build/go2_gps_nav/build/lib
+creating /home/hiwilab/Project/DOG/ros2_ws/build/go2_gps_nav/build/lib/go2_gps_nav
+copying go2_gps_nav/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_gps_nav/build/lib/go2_gps_nav
+copying go2_gps_nav/goal_publisher.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_gps_nav/build/lib/go2_gps_nav
+copying go2_gps_nav/gps_navigation_node.py -> /home/hiwilab/Project/DOG/ros2_ws/build/go2_gps_nav/build/lib/go2_gps_nav
+running install
+running install_lib
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/lib/python3.10/site-packages/go2_gps_nav
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_gps_nav/build/lib/go2_gps_nav/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/lib/python3.10/site-packages/go2_gps_nav
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_gps_nav/build/lib/go2_gps_nav/goal_publisher.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/lib/python3.10/site-packages/go2_gps_nav
+copying /home/hiwilab/Project/DOG/ros2_ws/build/go2_gps_nav/build/lib/go2_gps_nav/gps_navigation_node.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/lib/python3.10/site-packages/go2_gps_nav
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/lib/python3.10/site-packages/go2_gps_nav/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/lib/python3.10/site-packages/go2_gps_nav/goal_publisher.py to goal_publisher.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/lib/python3.10/site-packages/go2_gps_nav/gps_navigation_node.py to gps_navigation_node.cpython-310.pyc
+running install_data
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/share/ament_index
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/share/ament_index/resource_index
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/share/ament_index/resource_index/packages
+copying resource/go2_gps_nav -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/share/ament_index/resource_index/packages
+copying package.xml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/share/go2_gps_nav
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/share/go2_gps_nav/launch
+copying launch/gps_navigation.launch.py -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/share/go2_gps_nav/launch
+creating /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/share/go2_gps_nav/config
+copying config/navigation_params.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/share/go2_gps_nav/config
+running install_egg_info
+Copying ../../build/go2_gps_nav/go2_gps_nav.egg-info to /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/lib/python3.10/site-packages/go2_gps_nav-0.0.1-py3.10.egg-info
+running install_scripts
+Installing gps_navigation_node script to /home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav/lib/go2_gps_nav
+writing list of installed files to '/home/hiwilab/Project/DOG/ros2_ws/build/go2_gps_nav/install.log'

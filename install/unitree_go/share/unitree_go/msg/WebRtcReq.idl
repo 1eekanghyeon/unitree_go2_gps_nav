@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from unitree_go/msg/WebRtcReq.msg
+// generated code does not contain a copyright notice
+
+
+module unitree_go {
+  module msg {
+    @verbatim (language="comment", text=
+      "message header id. if 0, it will be assigned automatically")
+    struct WebRtcReq {
+      int64 id;
+
+      @verbatim (language="comment", text=
+        "topic name on dog's side including rt/ prefix")
+      string topic;
+
+      @verbatim (language="comment", text=
+        "api_id, see https://wiki.theroboverse.com/en/unitree-go2-app-console-commands#sending-commands-to-go2")
+      int64 api_id;
+
+      @verbatim (language="comment", text=
+        "payload for specific api_id")
+      string parameter;
+
+      @verbatim (language="comment", text=
+        "priority of the message. 0 non-priority, 1 priority")
+      uint8 priority;
+    };
+  };
+};
