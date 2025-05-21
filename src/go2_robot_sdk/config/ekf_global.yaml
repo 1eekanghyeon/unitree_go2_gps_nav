@@ -1,64 +1,67 @@
-# config/ekf_global.yaml (실외 RTK-GPS + 맵 기반, ROS2 Nav2용, 완성본)
 ekf_global_node:
   ros__parameters:
     frequency: 30.0
     sensor_timeout: 0.2
-    two_d_mode: true               # 2D 모드(XY 평면, yaw만) → false (3D모션, 경사대응)
+    two_d_mode: true              
     transform_time_offset: 0.0
     transform_timeout: 0.0
     print_diagnostics: true
     debug: false
 
-    map_frame: map_gps
+    map_frame: utm
     odom_frame: odom
     base_link_frame: base_link
-    world_frame: map_gps                # <-- map 기준 global frame
+    world_frame: utm              
 
-    publish_tf: false               # map→odom TF는 amcl/navsat_transform이 담당. EKF는 TF 발행 X
+    publish_tf: true            
 
-    # GPS (NavSatFix)는 /odometry/gps로 들어온다고 가정
-    # IMU는 /imu_converted (IMUConverter 노드로부터)
-    # EKF는 이 둘만 사용 (추가 센서 있으면 더 붙여도 됨)
 
-    # 1. GPS 입력
-    gps0: /odometry/gps
-    gps0_config: [true,  true,  false,   # X, Y, Z 위치 사용 (위도/경도/고도 → UTM)
-                  false, false, false,  # Roll, Pitch, Yaw 자세 사용 안함 (IMU로)
-                  false, false, false,  # Vx, Vy, Vz 속도 사용 X (GPS 속도 신뢰도 낮음)
-                  false, false, false,  # Vroll, Vpitch, Vyaw 속도 사용 X
-                  false, false, false]  # Ax, Ay, Az 가속도 사용 X
-    gps0_queue_size: 2
-    gps0_nodelay: false
-    gps0_differential: false
-    gps0_relative: false
+    odom0: /odometry/filtered_local
+    odom0_config: [true, true, false,  
+                   false, false, false,  
+                   false, false, false,  
+                   false, false, false,  
+                   false, false, false]  
+    odom0_queue_size: 10
+    odom0_nodelay: false
+    odom0_differential: false
+    odom0_relative: false 
 
-    # 2. IMU 입력
+
+    odom1: /odometry/gps
+    odom1_config: [true,  true,  false,   # X, Y, Z 
+                  false, false, false,  # Roll, Pitch, Yaw 
+                  false, false, false,  # Vx, Vy, Vz 
+                  false, false, false,  # Vroll, Vpitch, Vyaw 
+                  false, false, false]  # Ax, Ay, Az 
+    odom1_queue_size: 10
+    odom1_nodelay: false
+    odom1_differential: false
+    odom1_relative: false
+
+
     imu0: /imu_converted
-    imu0_config: [false, false, false,   # X, Y, Z 위치 사용 X
-                  false, false, true,    # Roll, Pitch, Yaw 자세만 사용
-                  false, false, false,   # Vx, Vy, Vz 선속도 사용 X
-                  false, false, true,    # Vroll, Vpitch, Vyaw 각속도만 사용
-                  true,  true,  false]    # Ax, Ay, Az 선형 가속도 (중력 보정)
+    imu0_config: [false, false, false,   # X, Y, Z 
+                  false, false, true,    # Roll, Pitch, Yaw 
+                  false, false, false,   # Vx, Vy, Vz 
+                  false, false, false,    # Vroll, Vpitch, Vyaw 
+                  false, false, false]    # Ax, Ay, Az 
     imu0_nodelay: false
     imu0_differential: false
     imu0_relative: false
     imu0_queue_size: 10
     imu0_remove_gravitational_acceleration: true
 
-    # GPS 입력 covariance(신뢰도, RTK는 2cm~4cm급, 실제 현장에 맞게 수정)
-    # EKF가 센서에서 받은 covariance도 동적으로 반영함
-    # 일반적으로 이 값은 NavSatFix에 실시간 포함되므로 EKF가 자동 반영함
-
-    # 프로세스 노이즈 공분산 (최소 기본값, 상황에 맞게 미세조정)
+ 
     process_noise_covariance: [
-      0.05, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
-      0.0,  0.05, 0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+      0.00000001, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+      0.0,  0.00000001, 0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
       0.0,  0.0,  0.06, 0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
       0.0,  0.0,  0.0,  0.03, 0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
       0.0,  0.0,  0.0,  0.0,  0.03, 0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
-      0.0,  0.0,  0.0,  0.0,  0.0,  0.06, 0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
-      0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0025, 0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, # vx
-      0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0025, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, # vy
+      0.0,  0.0,  0.0,  0.0,  0.0,  0.00000001, 0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+      0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.00000001, 0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, # vx
+      0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.00000001, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0, # vy
       0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.04, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0, # vz
       0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.01, 0.0,  0.0,  0.0,  0.0,  0.0, # vroll
       0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.01, 0.0,  0.0,  0.0,  0.0, # vpitch
@@ -68,16 +71,16 @@ ekf_global_node:
       0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.015 # az
     ]
 
-    # 초기 추정 공분산 (시작 위치 불확실하면 1.0, roll/pitch는 작게)
+
     initial_estimate_covariance: [
-      0.01,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
-      0.0,  0.01,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+      1.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+      0.0,  1.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
       0.0,  0.0,  1.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
       0.0,  0.0,  0.0,  0.01, 0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
       0.0,  0.0,  0.0,  0.0,  0.01, 0.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
-      0.0,  0.0,  0.0,  0.0,  0.0,  0.1,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
-      0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1e-3,  0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
-      0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   1e-3,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+      0.0,  0.0,  0.0,  0.0,  0.0,  1.0,  0.0,   0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+      0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  1.0,  0.0,   0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
+      0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   1.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
       0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   1e-3, 0.0,  0.0,  0.0,  0.0,  0.0,  0.0,
       0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  1e-3, 0.0,  0.0,  0.0,  0.0,  0.0,
       0.0,  0.0,  0.0,  0.0,  0.0,  0.0,  0.0,   0.0,   0.0,  0.0,  1e-3, 0.0,  0.0,  0.0,  0.0,

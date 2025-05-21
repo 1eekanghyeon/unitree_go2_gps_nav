@@ -92,8 +92,8 @@ class GpsTcpRos2(Node):
                     # RTK GPS는 매우 정밀합니다. (표준편차)^2 = 분산.
                     # 예: 수평(East, North) 표준편차 2cm (0.02m), 수직(Altitude) 표준편차 4cm (0.04m) 가정
                     # 실제 사용하시는 RTK GPS 스펙에 맞춰 이 값을 조정해야 합니다.
-                    horizontal_accuracy_std_dev = 0.02  # 2cm
-                    vertical_accuracy_std_dev = 0.04    # 4cm
+                    horizontal_accuracy_std_dev = 0.001  # 2cm
+                    vertical_accuracy_std_dev = 0.001    # 4cm
                     
                     fix.position_covariance_type = NavSatFix.COVARIANCE_TYPE_DIAGONAL_KNOWN
                     

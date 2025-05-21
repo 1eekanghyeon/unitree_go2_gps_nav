@@ -15,8 +15,8 @@ slam_toolbox:
     base_frame: base_link
     scan_topic: /scan
     use_map_saver: true
-    mode: mapping
-
+    mode: localization
+    map_file_name: "/home/hiwilab/Project/DOG/ros2_ws/src/go2_robot_sdk/config/testmap.yaml"
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose

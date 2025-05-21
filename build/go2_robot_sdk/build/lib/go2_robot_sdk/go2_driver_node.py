@@ -1,9 +1,35 @@
+
+
+# Copyright (c) 2024, RoboVerse community
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#
+# 1. Redistributions of source code must retain the above copyright notice, this
+#    list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright notice,
+#    this list of conditions and the following disclaimer in the documentation
+#    and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
 import json
 import logging
 import os
 import threading
 import asyncio
-from aiortc.mediastreams import MediaStreamError 
+
 from aiortc import MediaStreamTrack
 from cv_bridge import CvBridge
 
@@ -292,7 +318,6 @@ class RobotBaseNode(Node):
         odom_trans.transform.rotation.z = msg.pose.orientation.z
         odom_trans.transform.rotation.w = msg.pose.orientation.w
         # self.broadcaster.sendTransform(odom_trans)
-        pass
 
     def publish_joint_state_cyclonedds(self, msg):
         joint_state = JointState()
@@ -353,32 +378,32 @@ class RobotBaseNode(Node):
     async def on_video_frame(self, track: MediaStreamTrack, robot_num):
         logger.info(f"Video frame received for robot {robot_num}")
         
-        try:
-            while True:
-                frame = await track.recv()           # 여기서 예외 발생 가능
-                img = frame.to_ndarray(format="bgr24")
-                # ↓↓↓ 기존 이미지 → ROS 메시지 변환·퍼블리시 부분은 그대로 ↓↓↓
-                ros_image = self.bridge.cv2_to_imgmsg(img, encoding="bgr8")
-                ros_image.header.stamp = self.get_clock().now().to_msg()
-                camera_info = self.camera_info
-                camera_info.header.stamp = ros_image.header.stamp
+        while True:
+            frame = await track.recv()
+            img = frame.to_ndarray(format="bgr24")
 
-                if self.conn_mode == 'single':
-                    camera_info.header.frame_id = 'front_camera'
-                    ros_image.header.frame_id = 'front_camera'
-                else:
-                    camera_info.header.frame_id = f'robot{robot_num}/front_camera'
-                    ros_image.header.frame_id = f'robot{robot_num}/front_camera'
+            logger.debug(
+                f"Shape: {img.shape}, Dimensions: {img.ndim}, Type: {img.dtype}, Size: {img.size}")
 
-                self.img_pub[int(robot_num)].publish(ros_image)
-                self.camera_info_pub[int(robot_num)].publish(camera_info)
-                await asyncio.sleep(0)
-        except MediaStreamError:
-            # 스트림이 정상적으로 종료됨 → 재접속 대기
-            self.get_logger().warning(f"[{robot_num}] video track closed – waiting for reconnect")
-        except Exception as e:
-            # 예기치 못한 오류 로깅
-            self.get_logger().error(f"[{robot_num}] video track error: {e}")
+            # Convert the OpenCV image to ROS Image message
+            ros_image = self.bridge.cv2_to_imgmsg(img, encoding="bgr8")
+            ros_image.header.stamp = self.get_clock().now().to_msg()
+
+            # Set the timestamp for both image and camera info
+            camera_info = self.camera_info
+            camera_info.header.stamp = ros_image.header.stamp
+
+            if self.conn_mode == 'single':
+                camera_info.header.frame_id = 'front_camera'
+                ros_image.header.frame_id = 'front_camera'
+            else:
+                camera_info.header.frame_id = f'robot{str(robot_num)}/front_camera'
+                ros_image.header.frame_id = f'robot{str(robot_num)}/front_camera'
+
+            # Publish image and camera info
+            self.img_pub[robot_num].publish(ros_image)
+            self.camera_info_pub[robot_num].publish(camera_info)
+            await asyncio.sleep(0)
 
     def on_data_channel_message(self, _, msg, robot_num):
 
@@ -421,10 +446,12 @@ class RobotBaseNode(Node):
                 odom_trans.transform.rotation.w = self.robot_odom[str(
                     i)]['data']['pose']['orientation']['w']
                 # self.broadcaster.sendTransform(odom_trans)
-                pass
+
     def publish_odom_topic_webrtc(self):
         for i in range(len(self.robot_odom)):
+            key = str(i)
             if self.robot_odom[str(i)]:
+                
                 odom_msg = Odometry()
                 odom_msg.header.stamp = self.get_clock().now().to_msg()
                 odom_msg.header.frame_id = 'odom'
@@ -450,29 +477,30 @@ class RobotBaseNode(Node):
                 odom_msg.pose.pose.orientation.w = self.robot_odom[str(
                     i)]['data']['pose']['orientation']['w']
                 
-                # === 중요: Pose Covariance 채우기 ===
+                #      === 중요: Pose Covariance 채우기 ===
                 # 이 값들은 로봇 오도메트리의 불확실성을 나타냅니다. 실제 값은 튜닝이 필요합니다.
                 # 여기서는 대각선 요소에만 작은 값들을 할당합니다. (분산 값이므로 제곱 형태)
                 # (x, y, z, rot_x, rot_y, rot_z) 순서
                 odom_msg.pose.covariance = [0.0] * 36
-                odom_msg.pose.covariance[0] = 0.01    # x 위치 분산 (0.1m 표준편차)
-                odom_msg.pose.covariance[7] = 0.01    # y 위치 분산 (0.1m 표준편차)
+                odom_msg.pose.covariance[0] = 0.00001    # x 위치 분산 (0.1m 표준편차)
+                odom_msg.pose.covariance[7] = 0.00001  # y 위치 분산 (0.1m 표준편차)
                 odom_msg.pose.covariance[14] = 0.01   # z 위치 분산 (0.1m 표준편차) - 2D 모드가 아니면 사용
-                odom_msg.pose.covariance[21] = 0.001  # roll 자세 분산 (약 1.8도 표준편차)
-                odom_msg.pose.covariance[28] = 0.001  # pitch 자세 분산
-                odom_msg.pose.covariance[35] = 0.005  # yaw 자세 분산 (yaw는 보통 더 불안정)
+                odom_msg.pose.covariance[21] = 0.0004  # roll 자세 분산 (약 1.8도 표준편차)
+                odom_msg.pose.covariance[28] = 0.0004  # pitch 자세 분산
+                odom_msg.pose.covariance[35] = 0.0025  # yaw 자세 분산 (yaw는 보통 더 불안정)
 
-                odom_data = self.robot_odom[str(i)]['data']
-                # 로봇에서 받은 속도 데이터 채우기 (만약 있다면)
-                # self.robot_odom[str(i)]['data']에 'twist' 정보가 있는지 확인 필요
-                if 'twist' in odom_data and 'linear' in odom_data['twist'] and 'angular' in odom_data['twist']:
-                    odom_msg.twist.twist.linear.x = odom_data['twist']['linear']['x']
-                    odom_msg.twist.twist.linear.y = odom_data['twist']['linear']['y']
-                    odom_msg.twist.twist.linear.z = odom_data['twist']['linear']['z']
-                    odom_msg.twist.twist.angular.x = odom_data['twist']['angular']['x']
-                    odom_msg.twist.twist.angular.y = odom_data['twist']['angular']['y']
-                    odom_msg.twist.twist.angular.z = odom_data['twist']['angular']['z']
-                else: # Twist 정보가 없다면 0으로 채움
+                if key in self.robot_sport_state and self.robot_sport_state[key]:
+                    vel = self.robot_sport_state[key]['data']['velocity']
+                    # 선속도
+                    odom_msg.twist.twist.linear.x  = float(vel[0])
+                    odom_msg.twist.twist.linear.y  = float(vel[1])
+                    odom_msg.twist.twist.linear.z  = float(vel[2])
+                    # 각속도는 Go2State 메시지에 없으니 0으로
+                    odom_msg.twist.twist.angular.x = 0.0
+                    odom_msg.twist.twist.angular.y = 0.0
+                    odom_msg.twist.twist.angular.z = 0.0
+                else:
+                    # fallback: 0으로
                     odom_msg.twist.twist.linear.x = 0.0
                     odom_msg.twist.twist.linear.y = 0.0
                     odom_msg.twist.twist.linear.z = 0.0
@@ -485,15 +513,14 @@ class RobotBaseNode(Node):
                 # 속도 정보의 불확실성을 나타냅니다. 실제 값은 튜닝이 필요합니다.
                 # (vx, vy, vz, v_rot_x, v_rot_y, v_rot_z) 순서
                 odom_msg.twist.covariance = [0.0] * 36
-                odom_msg.twist.covariance[0] = 0.0025   # vx 선속도 분산 (0.05 m/s 표준편차)
-                odom_msg.twist.covariance[7] = 0.0025   # vy 선속도 분산
-                odom_msg.twist.covariance[14] = 0.0025  # vz 선속도 분산
+                odom_msg.twist.covariance[0] = 0.000001   # vx 선속도 분산 (0.05 m/s 표준편차)
+                odom_msg.twist.covariance[7] = 0.000001   # vy 선속도 분산
+                odom_msg.twist.covariance[14] = 0.1  # vz 선속도 분산
                 odom_msg.twist.covariance[21] = 0.0001 # vroll 각속도 분산 (약 0.57도/s 표준편차)
                 odom_msg.twist.covariance[28] = 0.0001 # vpitch 각속도 분산
                 odom_msg.twist.covariance[35] = 0.0004 # vyaw 각속도 분산
 
-                self.go2_odometry_pub[i].publish(odom_msg) # publisher 배열의 인덱스 i 사용
-               
+                self.go2_odometry_pub[i].publish(odom_msg)
 
     def publish_lidar_webrtc(self):
         for i in range(len(self.robot_lidar)):
@@ -878,3 +905,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

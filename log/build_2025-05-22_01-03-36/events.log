@@ -1,0 +1,7 @@
+[0.000000] (-) TimerEvent: {}
+[0.000162] (-) JobUnselected: {'identifier': 'coco_detector'}
+[0.000189] (-) JobUnselected: {'identifier': 'go2_gps_nav'}
+[0.000206] (-) JobUnselected: {'identifier': 'go2_interfaces'}
+[0.000221] (-) JobUnselected: {'identifier': 'go2_robot_sdk'}
+[0.000234] (-) JobUnselected: {'identifier': 'unitree_go'}
+[0.000824] (-) EventReactorShutdown: {}

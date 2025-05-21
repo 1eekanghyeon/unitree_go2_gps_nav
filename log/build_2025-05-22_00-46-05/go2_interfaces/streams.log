@@ -1,0 +1,343 @@
+[0.024s] Invoking command in '/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk:/home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav:/home/hiwilab/Project/DOG/ros2_ws/install/coco_detector:/opt/ros/humble /usr/bin/cmake /home/hiwilab/Project/DOG/ros2_ws/src/go2_interfaces -DCMAKE_INSTALL_PREFIX=/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces
+[0.359s] -- The C compiler identification is GNU 11.4.0
+[0.677s] -- The CXX compiler identification is GNU 11.4.0
+[1.109s] -- Detecting C compiler ABI info
+[1.267s] -- Detecting C compiler ABI info - done
+[1.274s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.274s] -- Detecting C compile features
+[1.275s] -- Detecting C compile features - done
+[1.278s] -- Detecting CXX compiler ABI info
+[1.441s] -- Detecting CXX compiler ABI info - done
+[1.447s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.447s] -- Detecting CXX compile features
+[1.447s] -- Detecting CXX compile features - done
+[1.449s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.575s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.651s] -- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.832s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.836s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.843s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.856s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.871s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.906s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.155s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.546s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.705s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.926s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.928s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.474s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[3.474s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.474s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.474s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[3.494s] -- Found PythonExtra: .so  
+[3.594s] -- Configuring done
+[3.632s] -- Generating done
+[3.642s] -- Build files have been written to: /home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces
+[3.651s] Invoked command in '/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk:/home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav:/home/hiwilab/Project/DOG/ros2_ws/install/coco_detector:/opt/ros/humble /usr/bin/cmake /home/hiwilab/Project/DOG/ros2_ws/src/go2_interfaces -DCMAKE_INSTALL_PREFIX=/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces
+[3.652s] Invoking command in '/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk:/home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav:/home/hiwilab/Project/DOG/ros2_ws/install/coco_detector:/opt/ros/humble /usr/bin/cmake --build /home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces -- -j8 -l8
+[3.687s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[4.207s] [  1%] Built target go2_interfaces__cpp
+[4.227s] [  1%] Built target ament_cmake_python_copy_go2_interfaces
+[4.234s] [  3%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.581s] [  4%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/go2_interfaces/msg/detail/go2_cmd__type_support.cpp.o[0m
+[4.892s] [  6%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/go2_interfaces/msg/detail/go2_rpy_cmd__type_support.cpp.o[0m
+[5.197s] [  7%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/go2_interfaces/msg/detail/imu__type_support.cpp.o[0m
+[5.552s] [  9%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/go2_interfaces/msg/detail/go2_move__type_support.cpp.o[0m
+[5.871s] [ 11%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/go2_interfaces/msg/detail/go2_state__type_support.cpp.o[0m
+[6.238s] [ 12%] [32m[1mLinking CXX shared library libgo2_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[6.429s] [ 12%] Built target go2_interfaces__rosidl_typesupport_introspection_cpp
+[6.658s] running egg_info
+[6.659s] creating go2_interfaces.egg-info
+[6.659s] writing go2_interfaces.egg-info/PKG-INFO
+[6.659s] writing dependency_links to go2_interfaces.egg-info/dependency_links.txt
+[6.659s] writing top-level names to go2_interfaces.egg-info/top_level.txt
+[6.660s] writing manifest file 'go2_interfaces.egg-info/SOURCES.txt'
+[6.661s] reading manifest file 'go2_interfaces.egg-info/SOURCES.txt'
+[6.662s] writing manifest file 'go2_interfaces.egg-info/SOURCES.txt'
+[6.686s] [ 12%] Built target ament_cmake_python_build_go2_interfaces_egg
+[6.695s] [ 14%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[7.177s] [ 15%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/go2_interfaces/msg/detail/dds_fastrtps/go2_cmd__type_support.cpp.o[0m
+[7.502s] [ 17%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/go2_interfaces/msg/detail/dds_fastrtps/imu__type_support.cpp.o[0m
+[7.856s] [ 19%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/go2_interfaces/msg/detail/dds_fastrtps/go2_rpy_cmd__type_support.cpp.o[0m
+[8.159s] [ 20%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/go2_interfaces/msg/detail/dds_fastrtps/go2_move__type_support.cpp.o[0m
+[8.467s] [ 22%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/go2_interfaces/msg/detail/dds_fastrtps/go2_state__type_support.cpp.o[0m
+[8.825s] [ 23%] [32m[1mLinking CXX shared library libgo2_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[9.032s] [ 23%] Built target go2_interfaces__rosidl_typesupport_fastrtps_cpp
+[9.039s] [ 25%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[9.342s] [ 26%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/go2_interfaces/msg/go2_cmd__type_support.cpp.o[0m
+[9.551s] [ 28%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/go2_interfaces/msg/imu__type_support.cpp.o[0m
+[9.764s] [ 30%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/go2_interfaces/msg/go2_rpy_cmd__type_support.cpp.o[0m
+[9.972s] [ 31%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/go2_interfaces/msg/go2_move__type_support.cpp.o[0m
+[10.182s] [ 33%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/go2_interfaces/msg/go2_state__type_support.cpp.o[0m
+[10.399s] [ 34%] [32m[1mLinking CXX shared library libgo2_interfaces__rosidl_typesupport_cpp.so[0m
+[10.510s] [ 34%] Built target go2_interfaces__rosidl_typesupport_cpp
+[10.517s] [ 36%] [34m[1mGenerating C code for ROS interfaces[0m
+[11.024s] [ 38%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/msg/detail/go2_cmd__functions.c.o[0m
+[11.061s] [ 39%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/msg/detail/imu__functions.c.o[0m
+[11.100s] [ 41%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/msg/detail/go2_rpy_cmd__functions.c.o[0m
+[11.139s] [ 42%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/msg/detail/go2_move__functions.c.o[0m
+[11.172s] [ 44%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_generator_c.dir/rosidl_generator_c/go2_interfaces/msg/detail/go2_state__functions.c.o[0m
+[11.207s] [ 46%] [32m[1mLinking C shared library libgo2_interfaces__rosidl_generator_c.so[0m
+[11.414s] [ 46%] Built target go2_interfaces__rosidl_generator_c
+[11.421s] [ 47%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[11.796s] [ 49%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/msg/detail/go2_cmd__type_support_c.cpp.o[0m
+[12.055s] [ 50%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/msg/detail/imu__type_support_c.cpp.o[0m
+[12.307s] [ 52%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/msg/detail/go2_rpy_cmd__type_support_c.cpp.o[0m
+[12.563s] [ 53%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/msg/detail/go2_move__type_support_c.cpp.o[0m
+[12.817s] [ 55%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/go2_interfaces/msg/detail/go2_state__type_support_c.cpp.o[0m
+[13.083s] [ 57%] [32m[1mLinking CXX shared library libgo2_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[13.314s] [ 57%] Built target go2_interfaces__rosidl_typesupport_fastrtps_c
+[13.322s] [ 58%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[13.620s] [ 60%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/go2_interfaces/msg/go2_cmd__type_support.cpp.o[0m
+[13.640s] [ 61%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/go2_interfaces/msg/imu__type_support.cpp.o[0m
+[13.662s] [ 63%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/go2_interfaces/msg/go2_rpy_cmd__type_support.cpp.o[0m
+[13.683s] [ 65%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/go2_interfaces/msg/go2_move__type_support.cpp.o[0m
+[13.705s] [ 66%] [32mBuilding CXX object CMakeFiles/go2_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/go2_interfaces/msg/go2_state__type_support.cpp.o[0m
+[13.726s] [ 68%] [32m[1mLinking CXX shared library libgo2_interfaces__rosidl_typesupport_c.so[0m
+[13.941s] [ 68%] Built target go2_interfaces__rosidl_typesupport_c
+[13.949s] [ 69%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[14.312s] [ 74%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/go2_interfaces/msg/detail/go2_move__type_support.c.o[0m
+[14.312s] [ 74%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/go2_interfaces/msg/detail/go2_state__type_support.c.o[0m
+[14.312s] [ 74%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/go2_interfaces/msg/detail/go2_cmd__type_support.c.o[0m
+[14.340s] [ 77%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/go2_interfaces/msg/detail/go2_rpy_cmd__type_support.c.o[0m
+[14.340s] [ 77%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/go2_interfaces/msg/detail/imu__type_support.c.o[0m
+[14.370s] [ 79%] [32m[1mLinking C shared library libgo2_interfaces__rosidl_typesupport_introspection_c.so[0m
+[14.486s] [ 79%] Built target go2_interfaces__rosidl_typesupport_introspection_c
+[14.500s] [ 79%] Built target go2_interfaces
+[14.515s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[15.145s] [ 80%] Built target go2_interfaces__py
+[15.160s] [ 82%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_generator_py.dir/rosidl_generator_py/go2_interfaces/msg/_go2_cmd_s.c.o[0m
+[15.160s] [ 85%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_generator_py.dir/rosidl_generator_py/go2_interfaces/msg/_go2_state_s.c.o[0m
+[15.160s] [ 85%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_generator_py.dir/rosidl_generator_py/go2_interfaces/msg/_go2_move_s.c.o[0m
+[15.243s] [ 87%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_generator_py.dir/rosidl_generator_py/go2_interfaces/msg/_imu_s.c.o[0m
+[15.246s] [ 88%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_generator_py.dir/rosidl_generator_py/go2_interfaces/msg/_go2_rpy_cmd_s.c.o[0m
+[15.334s] [ 90%] [32m[1mLinking C shared library rosidl_generator_py/go2_interfaces/libgo2_interfaces__rosidl_generator_py.so[0m
+[15.479s] [ 90%] Built target go2_interfaces__rosidl_generator_py
+[15.497s] [ 92%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[15.501s] [ 93%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[15.503s] [ 95%] [32mBuilding C object CMakeFiles/go2_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[15.670s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/go2_interfaces/go2_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[15.680s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/go2_interfaces/go2_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[15.680s] [100%] [32m[1mLinking C shared library rosidl_generator_py/go2_interfaces/go2_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[15.813s] [100%] Built target go2_interfaces__rosidl_typesupport_c__pyext
+[15.822s] [100%] Built target go2_interfaces__rosidl_typesupport_introspection_c__pyext
+[15.836s] [100%] Built target go2_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[15.845s] Invoked command in '/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk:/home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav:/home/hiwilab/Project/DOG/ros2_ws/install/coco_detector:/opt/ros/humble /usr/bin/cmake --build /home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces -- -j8 -l8
+[15.853s] Invoking command in '/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk:/home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav:/home/hiwilab/Project/DOG/ros2_ws/install/coco_detector:/opt/ros/humble /usr/bin/cmake --install /home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces
+[15.859s] -- Install configuration: ""
+[15.859s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/ament_index/resource_index/rosidl_interfaces/go2_interfaces
+[15.859s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces
+[15.860s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg
+[15.860s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/imu.h
+[15.860s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/rosidl_generator_c__visibility_control.h
+[15.860s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/go2_rpy_cmd.h
+[15.860s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/go2_state.h
+[15.860s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/go2_cmd.h
+[15.861s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/go2_move.h
+[15.861s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail
+[15.861s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__struct.h
+[15.861s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__functions.h
+[15.861s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__type_support.h
+[15.861s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__struct.h
+[15.862s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__type_support.h
+[15.862s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__functions.c
+[15.862s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__functions.c
+[15.862s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__functions.h
+[15.862s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__functions.h
+[15.864s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__type_support.h
+[15.864s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__struct.h
+[15.866s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__struct.h
+[15.866s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__type_support.h
+[15.866s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__functions.h
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__functions.h
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__functions.c
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__struct.h
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__functions.c
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__type_support.h
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__functions.c
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/environment/library_path.sh
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/environment/library_path.dsv
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_generator_c.so
+[15.867s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_generator_c.so" to ""
+[15.867s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces
+[15.867s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[15.867s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__rosidl_typesupport_fastrtps_c.h
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__rosidl_typesupport_fastrtps_c.h
+[15.867s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__rosidl_typesupport_fastrtps_c.h
+[15.868s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__rosidl_typesupport_fastrtps_c.h
+[15.868s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__rosidl_typesupport_fastrtps_c.h
+[15.868s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_fastrtps_c.so
+[15.868s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[15.868s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces
+[15.868s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg
+[15.869s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/go2_cmd.hpp
+[15.869s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[15.869s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/go2_move.hpp
+[15.869s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/go2_state.hpp
+[15.869s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail
+[15.869s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__struct.hpp
+[15.869s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__struct.hpp
+[15.870s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__type_support.hpp
+[15.870s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__builder.hpp
+[15.870s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__traits.hpp
+[15.870s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__builder.hpp
+[15.870s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__type_support.hpp
+[15.870s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__builder.hpp
+[15.870s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__builder.hpp
+[15.870s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__type_support.hpp
+[15.871s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__struct.hpp
+[15.871s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__traits.hpp
+[15.871s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__type_support.hpp
+[15.871s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__traits.hpp
+[15.871s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__traits.hpp
+[15.871s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__traits.hpp
+[15.871s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__type_support.hpp
+[15.872s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__struct.hpp
+[15.872s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__struct.hpp
+[15.872s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__builder.hpp
+[15.872s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/imu.hpp
+[15.872s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/go2_rpy_cmd.hpp
+[15.872s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces
+[15.872s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg
+[15.873s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[15.873s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail
+[15.873s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__rosidl_typesupport_fastrtps_cpp.hpp
+[15.873s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__rosidl_typesupport_fastrtps_cpp.hpp
+[15.873s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__rosidl_typesupport_fastrtps_cpp.hpp
+[15.873s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[15.874s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[15.874s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/dds_fastrtps
+[15.874s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[15.874s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[15.875s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces
+[15.875s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg
+[15.875s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail
+[15.875s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__type_support.c
+[15.875s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__rosidl_typesupport_introspection_c.h
+[15.875s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__type_support.c
+[15.875s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__rosidl_typesupport_introspection_c.h
+[15.875s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__rosidl_typesupport_introspection_c.h
+[15.875s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__type_support.c
+[15.876s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__type_support.c
+[15.876s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__rosidl_typesupport_introspection_c.h
+[15.876s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__rosidl_typesupport_introspection_c.h
+[15.876s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__type_support.c
+[15.876s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[15.876s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_introspection_c.so
+[15.876s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[15.876s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_c.so
+[15.876s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_c.so" to ""
+[15.877s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces
+[15.877s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg
+[15.877s] -- Up-to-date: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail
+[15.877s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__rosidl_typesupport_introspection_cpp.hpp
+[15.877s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__rosidl_typesupport_introspection_cpp.hpp
+[15.877s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__type_support.cpp
+[15.877s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__rosidl_typesupport_introspection_cpp.hpp
+[15.878s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_move__type_support.cpp
+[15.878s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_rpy_cmd__type_support.cpp
+[15.878s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/imu__type_support.cpp
+[15.878s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_cmd__rosidl_typesupport_introspection_cpp.hpp
+[15.878s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__type_support.cpp
+[15.878s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/include/go2_interfaces/go2_interfaces/msg/detail/go2_state__rosidl_typesupport_introspection_cpp.hpp
+[15.878s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_introspection_cpp.so
+[15.879s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_cpp.so
+[15.879s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_typesupport_cpp.so" to ""
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/environment/pythonpath.sh
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/environment/pythonpath.dsv
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces-0.0.0-py3.10.egg-info
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[15.879s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/libgo2_interfaces__rosidl_generator_py.so
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/__init__.py
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_move.py
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/__init__.py
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_imu_s.c
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_move_s.c
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_state.py
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_cmd_s.c
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_imu.py
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_rpy_cmd.py
+[15.880s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_state_s.c
+[15.881s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_cmd.py
+[15.881s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_rpy_cmd_s.c
+[15.881s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[15.881s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/_go2_interfaces_s.ep.rosidl_typesupport_c.c
+[15.917s] Listing '/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces'...
+[15.917s] Compiling '/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/__init__.py'...
+[15.917s] Listing '/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg'...
+[15.917s] Compiling '/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/__init__.py'...
+[15.917s] Compiling '/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_cmd.py'...
+[15.917s] Compiling '/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_move.py'...
+[15.917s] Compiling '/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_rpy_cmd.py'...
+[15.917s] Compiling '/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_go2_state.py'...
+[15.917s] Compiling '/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/msg/_imu.py'...
+[15.921s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[15.922s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[15.922s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[15.922s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[15.922s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[15.923s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/local/lib/python3.10/dist-packages/go2_interfaces/go2_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[15.923s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_generator_py.so
+[15.923s] -- Set runtime path of "/home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/lib/libgo2_interfaces__rosidl_generator_py.so" to ""
+[15.923s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/msg/Go2Cmd.idl
+[15.923s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/msg/Go2State.idl
+[15.923s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/msg/Go2Move.idl
+[15.923s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/msg/Go2RpyCmd.idl
+[15.924s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/msg/IMU.idl
+[15.924s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/msg/Go2Cmd.msg
+[15.924s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/msg/Go2State.msg
+[15.924s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/msg/Go2Move.msg
+[15.924s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/msg/Go2RpyCmd.msg
+[15.924s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/msg/IMU.msg
+[15.924s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/ament_index/resource_index/package_run_dependencies/go2_interfaces
+[15.925s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/ament_index/resource_index/parent_prefix_path/go2_interfaces
+[15.925s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/environment/ament_prefix_path.sh
+[15.925s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/environment/ament_prefix_path.dsv
+[15.925s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/environment/path.sh
+[15.925s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/environment/path.dsv
+[15.925s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.bash
+[15.925s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.sh
+[15.925s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.zsh
+[15.926s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/local_setup.dsv
+[15.926s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/package.dsv
+[15.926s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/ament_index/resource_index/packages/go2_interfaces
+[15.926s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/export_go2_interfaces__rosidl_generator_cExport.cmake
+[15.926s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/export_go2_interfaces__rosidl_generator_cExport-noconfig.cmake
+[15.927s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/export_go2_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[15.927s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/export_go2_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[15.927s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/export_go2_interfaces__rosidl_generator_cppExport.cmake
+[15.927s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/export_go2_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[15.927s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/export_go2_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[15.928s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[15.928s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[15.928s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cExport.cmake
+[15.928s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[15.928s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[15.928s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[15.929s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cppExport.cmake
+[15.929s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[15.929s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/export_go2_interfaces__rosidl_generator_pyExport.cmake
+[15.929s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/export_go2_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[15.930s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/rosidl_cmake-extras.cmake
+[15.930s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[15.930s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.931s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[15.931s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[15.931s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[15.931s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[15.931s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfacesConfig.cmake
+[15.932s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/cmake/go2_interfacesConfig-version.cmake
+[15.932s] -- Installing: /home/hiwilab/Project/DOG/ros2_ws/install/go2_interfaces/share/go2_interfaces/package.xml
+[15.934s] Invoked command in '/home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hiwilab/Project/DOG/ros2_ws/install/go2_robot_sdk:/home/hiwilab/Project/DOG/ros2_ws/install/go2_gps_nav:/home/hiwilab/Project/DOG/ros2_ws/install/coco_detector:/opt/ros/humble /usr/bin/cmake --install /home/hiwilab/Project/DOG/ros2_ws/build/go2_interfaces

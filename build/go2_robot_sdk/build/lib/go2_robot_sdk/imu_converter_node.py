@@ -44,19 +44,19 @@ class IMUConverter(Node):
         imu_msg.linear_acceleration.x = float(msg.accelerometer[0])
         imu_msg.linear_acceleration.y = float(msg.accelerometer[1])
         imu_msg.linear_acceleration.z = float(msg.accelerometer[2])
-        imu_msg.orientation_covariance[0] = 0.01  # Roll 분산
-        imu_msg.orientation_covariance[4] = 0.01  # Pitch 분산
-        imu_msg.orientation_covariance[8] = 0.01  # Yaw 분산
+        imu_msg.orientation_covariance[0] = 0.0005  # Roll 분산
+        imu_msg.orientation_covariance[4] = 0.0005 # Pitch 분산
+        imu_msg.orientation_covariance[8] = 0.0001  # Yaw 분산
 
         # angular_velocity_covariance: X, Y, Z 각속도 분산
-        imu_msg.angular_velocity_covariance[0] = 0.01 # X축 각속도 분산
-        imu_msg.angular_velocity_covariance[4] = 0.01 # Y축 각속도 분산
-        imu_msg.angular_velocity_covariance[8] = 0.01 # Z축 각속도 분산
+        imu_msg.angular_velocity_covariance[0] = 0.001 # X축 각속도 분산
+        imu_msg.angular_velocity_covariance[4] = 0.001 # Y축 각속도 분산
+        imu_msg.angular_velocity_covariance[8] = 0.001 # Z축 각속도 분산
 
         # linear_acceleration_covariance: X, Y, Z 선형 가속도 분산
-        imu_msg.linear_acceleration_covariance[0] = 0.1 # X축 가속도 분산 (보통 가속도계가 자이로보다 노이즈가 큼)
-        imu_msg.linear_acceleration_covariance[4] = 0.1 # Y축 가속도 분산
-        imu_msg.linear_acceleration_covariance[8] = 0.1 # Z축 가속도 분산
+        imu_msg.linear_acceleration_covariance[0] = 1e-4 # X축 가속도 분산 (보통 가속도계가 자이로보다 노이즈가 큼)
+        imu_msg.linear_acceleration_covariance[4] = 1e-4 # Y축 가속도 분산
+        imu_msg.linear_acceleration_covariance[8] = 1e-4 # Z축 가속도 분산
 
         # try:
         #     roll, pitch, yaw = euler_from_quaternion([imu_msg.orientation.x, imu_msg.orientation.y, imu_msg.orientation.z, imu_msg.orientation.w])

@@ -1,0 +1,37 @@
+[0.993s] Invoking command in '/home/hiwilab/Project/DOG/ros2_ws/src/coco_detector': PYTHONPATH=/home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/coco_detector build --build-base /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/build install --record /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/install.log --single-version-externally-managed install_data
+[1.272s] running egg_info
+[1.273s] creating ../../build/coco_detector/coco_detector.egg-info
+[1.273s] writing ../../build/coco_detector/coco_detector.egg-info/PKG-INFO
+[1.273s] writing dependency_links to ../../build/coco_detector/coco_detector.egg-info/dependency_links.txt
+[1.273s] writing entry points to ../../build/coco_detector/coco_detector.egg-info/entry_points.txt
+[1.273s] writing requirements to ../../build/coco_detector/coco_detector.egg-info/requires.txt
+[1.274s] writing top-level names to ../../build/coco_detector/coco_detector.egg-info/top_level.txt
+[1.274s] writing manifest file '../../build/coco_detector/coco_detector.egg-info/SOURCES.txt'
+[1.275s] reading manifest file '../../build/coco_detector/coco_detector.egg-info/SOURCES.txt'
+[1.276s] writing manifest file '../../build/coco_detector/coco_detector.egg-info/SOURCES.txt'
+[1.276s] running build
+[1.276s] running build_py
+[1.276s] creating /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/build
+[1.277s] creating /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/build/lib
+[1.277s] creating /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/build/lib/coco_detector
+[1.277s] copying coco_detector/coco_detector_node.py -> /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/build/lib/coco_detector
+[1.277s] copying coco_detector/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/build/lib/coco_detector
+[1.277s] running install
+[1.279s] running install_lib
+[1.279s] creating /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/lib/python3.10/site-packages/coco_detector
+[1.280s] copying /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/build/lib/coco_detector/coco_detector_node.py -> /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/lib/python3.10/site-packages/coco_detector
+[1.280s] copying /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/build/lib/coco_detector/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/lib/python3.10/site-packages/coco_detector
+[1.280s] byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/lib/python3.10/site-packages/coco_detector/coco_detector_node.py to coco_detector_node.cpython-310.pyc
+[1.281s] byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/lib/python3.10/site-packages/coco_detector/__init__.py to __init__.cpython-310.pyc
+[1.281s] running install_data
+[1.281s] creating /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/share/ament_index
+[1.281s] creating /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/share/ament_index/resource_index
+[1.281s] creating /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/share/ament_index/resource_index/packages
+[1.282s] copying resource/coco_detector -> /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/share/ament_index/resource_index/packages
+[1.282s] copying package.xml -> /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/share/coco_detector
+[1.282s] running install_egg_info
+[1.283s] Copying ../../build/coco_detector/coco_detector.egg-info to /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/lib/python3.10/site-packages/coco_detector-0.0.0-py3.10.egg-info
+[1.285s] running install_scripts
+[1.304s] Installing coco_detector_node script to /home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/lib/coco_detector
+[1.304s] writing list of installed files to '/home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/install.log'
+[1.337s] Invoked command in '/home/hiwilab/Project/DOG/ros2_ws/src/coco_detector' returned '0': PYTHONPATH=/home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hiwilab/Project/DOG/ros2_ws/install/coco_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/coco_detector build --build-base /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/build install --record /home/hiwilab/Project/DOG/ros2_ws/build/coco_detector/install.log --single-version-externally-managed install_data

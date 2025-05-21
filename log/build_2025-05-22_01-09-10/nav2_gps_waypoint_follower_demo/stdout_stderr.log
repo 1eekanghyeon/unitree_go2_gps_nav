@@ -1,0 +1,69 @@
+running egg_info
+creating ../../../build/nav2_gps_waypoint_follower_demo/nav2_gps_waypoint_follower_demo.egg-info
+writing ../../../build/nav2_gps_waypoint_follower_demo/nav2_gps_waypoint_follower_demo.egg-info/PKG-INFO
+writing dependency_links to ../../../build/nav2_gps_waypoint_follower_demo/nav2_gps_waypoint_follower_demo.egg-info/dependency_links.txt
+writing entry points to ../../../build/nav2_gps_waypoint_follower_demo/nav2_gps_waypoint_follower_demo.egg-info/entry_points.txt
+writing requirements to ../../../build/nav2_gps_waypoint_follower_demo/nav2_gps_waypoint_follower_demo.egg-info/requires.txt
+writing top-level names to ../../../build/nav2_gps_waypoint_follower_demo/nav2_gps_waypoint_follower_demo.egg-info/top_level.txt
+writing manifest file '../../../build/nav2_gps_waypoint_follower_demo/nav2_gps_waypoint_follower_demo.egg-info/SOURCES.txt'
+reading manifest file '../../../build/nav2_gps_waypoint_follower_demo/nav2_gps_waypoint_follower_demo.egg-info/SOURCES.txt'
+writing manifest file '../../../build/nav2_gps_waypoint_follower_demo/nav2_gps_waypoint_follower_demo.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build
+creating /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib
+creating /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo
+copying nav2_gps_waypoint_follower_demo/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo
+copying nav2_gps_waypoint_follower_demo/interactive_waypoint_follower.py -> /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo
+copying nav2_gps_waypoint_follower_demo/gps_waypoint_logger.py -> /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo
+copying nav2_gps_waypoint_follower_demo/logged_waypoint_follower.py -> /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo
+creating /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo/utils
+copying nav2_gps_waypoint_follower_demo/utils/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo/utils
+copying nav2_gps_waypoint_follower_demo/utils/gps_utils.py -> /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo/utils
+running install
+running install_lib
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo
+copying /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo
+copying /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo/interactive_waypoint_follower.py -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo/utils
+copying /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo/utils/__init__.py -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo/utils
+copying /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo/utils/gps_utils.py -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo/utils
+copying /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo/gps_waypoint_logger.py -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo
+copying /home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/build/lib/nav2_gps_waypoint_follower_demo/logged_waypoint_follower.py -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo/interactive_waypoint_follower.py to interactive_waypoint_follower.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo/utils/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo/utils/gps_utils.py to gps_utils.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo/gps_waypoint_logger.py to gps_waypoint_logger.cpython-310.pyc
+byte-compiling /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo/logged_waypoint_follower.py to logged_waypoint_follower.cpython-310.pyc
+running install_data
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/ament_index
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/ament_index/resource_index
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/ament_index/resource_index/packages
+copying resource/nav2_gps_waypoint_follower_demo -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/ament_index/resource_index/packages
+copying package.xml -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/launch
+copying launch/dual_ekf_navsat.launch.py -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/launch
+copying launch/gazebo_gps_world.launch.py -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/launch
+copying launch/gps_waypoint_follower.launch.py -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/launch
+copying launch/mapviz.launch.py -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/launch
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/config
+copying config/demo_waypoints.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/config
+copying config/nav2_no_map_params.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/config
+copying config/gps_wpf_demo.mvc -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/config
+copying config/dual_ekf_navsat_params.yaml -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/config
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/urdf
+copying urdf/turtlebot3_waffle_gps.urdf -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/urdf
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/worlds
+copying worlds/sonoma_raceway.world -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/worlds
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/models
+creating /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/models/turtlebot_waffle_gps
+copying models/turtlebot_waffle_gps/model.config -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/models/turtlebot_waffle_gps
+copying models/turtlebot_waffle_gps/model.sdf -> /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/share/nav2_gps_waypoint_follower_demo/models/turtlebot_waffle_gps
+running install_egg_info
+Copying ../../../build/nav2_gps_waypoint_follower_demo/nav2_gps_waypoint_follower_demo.egg-info to /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/python3.10/site-packages/nav2_gps_waypoint_follower_demo-0.0.1-py3.10.egg-info
+running install_scripts
+Installing gps_waypoint_logger script to /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/nav2_gps_waypoint_follower_demo
+Installing interactive_waypoint_follower script to /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/nav2_gps_waypoint_follower_demo
+Installing logged_waypoint_follower script to /home/hiwilab/Project/DOG/ros2_ws/install/nav2_gps_waypoint_follower_demo/lib/nav2_gps_waypoint_follower_demo
+writing list of installed files to '/home/hiwilab/Project/DOG/ros2_ws/build/nav2_gps_waypoint_follower_demo/install.log'

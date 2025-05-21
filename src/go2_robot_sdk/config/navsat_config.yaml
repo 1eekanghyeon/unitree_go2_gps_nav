@@ -2,30 +2,16 @@
 
 navsat_transform_node:
   ros__parameters:
-    # --- TF 프레임 이름 ---
-    # navsat_transform_node는 입력 오도메트리(ekf_local 출력)의 frame_id와 child_frame_id를 사용.
-    # world_frame_id는 출력 /odometry/gps의 header.frame_id로 사용됨.
-    # base_link_frame, odom_frame, world_frame 파라미터는 robot_localization의 EKF 노드에서 사용.
-    # navsat_transform_node에서는 주로 리매핑된 토픽의 프레임 ID를 따르거나,
-    # 필요한 경우 broadcast_cartesian_transform_as 파라미터 등으로 출력 프레임 명시.
-    # 여기서는 ekf_global이 map->odom을 발행하므로, navsat_transform_node의 출력도 map 기준이 되어야 함.
-    # 따라서, 내부적으로는 map -> (입력 odom의 frame_id) -> (입력 odom의 child_frame_id) -> base_link
-    # 와 같은 변환을 고려함.
-    # 더 명확히 하기 위해, EKF 문서에서는 datum 파라미터를 통해 기준 좌표를 설정하는 것을 권장.
-    # 여기서는 world_frame_id를 map으로 명시하여 출력 기준을 정함.
-    world_frame_id: "map_gps"
-
-    # --- 기본 주기 및 지연 ---
+    
     frequency: 30.0
-    delay: 0.0011 # 측정된 평균 GPS 지연 시간
-    transform_timeout: 0.2 # TF 변환 대기 시간 (초)
-
-    # --- 좌표계 및 변환 관련 ---
-    magnetic_declination_radians: -0.1471 # IMU가 상대 Yaw를 제공하고 EKF가 정렬하므로 0.0으로 설정
-    yaw_offset: 0.0                   # URDF 모델 기준 IMU와 base_link 방향 일치 가정
-    zero_altitude: true                 # 2D 내비게이션이므로 고도 0 처리
-    broadcast_cartesian_transform: false # UTM 좌표계로의 TF 발행 여부 (보통 false)
-    publish_filtered_gps: true          # /odometry/gps 토픽 발행 (ekf_global 입력)
-    use_odometry_yaw: false             # **IMU Yaw를 사용하도록 false로 설정!** EKF_local이 안정적인 TF를 제공할 것이므로.
-    wait_for_datum: false       # 특정 측지 기준점 사용 안 함 (WGS84 기본)
-    use_sim_time: false                 # 실제 로봇 사용
+    delay: 0.0011 
+    transform_timeout: 0.2 
+    magnetic_declination_radians: 0.0           
+    zero_altitude: true                
+    broadcast_cartesian_transform: false 
+    broadcast_utm_transform: true
+    broadcast_utm_transform_as_parent_frame_: true
+    publish_filtered_gps: true          
+    use_odometry_yaw: true             
+    wait_for_datum: false       
+    use_sim_time: false        

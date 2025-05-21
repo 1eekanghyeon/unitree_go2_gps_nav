@@ -303,7 +303,8 @@ class Transaction:
 
     def __retry(self) -> None:
         if self.__tries >= self.__tries_max:
-            self.__future.set_exception(TransactionTimeout())
+            if not self.__future.done():  # ✅ 이미 완료되었는지 체크
+                self.__future.set_exception(TransactionTimeout())
             return
 
         self.__protocol.send_stun(self.__request, self.__addr)

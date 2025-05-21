@@ -36,7 +36,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     with_rviz2 = LaunchConfiguration('rviz2', default='true')
     with_nav2 = LaunchConfiguration('nav2', default='true')
-    with_slam = LaunchConfiguration('slam', default='true')
+    with_slam = LaunchConfiguration('slam', default='false')
     with_foxglove = LaunchConfiguration('foxglove', default='true')
     with_joystick = LaunchConfiguration('joystick', default='true')
     with_teleop = LaunchConfiguration('teleop', default='true')
@@ -129,6 +129,12 @@ def generate_launch_description():
         'ekf_global.yaml'
     )
 
+    hiwi_map = os.path.join(
+        get_package_share_directory('go2_robot_sdk'),
+        'config',
+        'testmap.yaml'
+    )
+
     if conn_mode == 'single':
 
         urdf_file_name = 'go2.urdf'
@@ -161,7 +167,7 @@ def generate_launch_description():
                 ],
                 parameters=[{
                     'target_frame': 'base_link',
-                    'max_height': 0.5
+                    'max_height': 1.0,
                 }],
                 output='screen',
             ),
@@ -221,43 +227,48 @@ def generate_launch_description():
             parameters=[{'robot_ip_lst': robot_ip_lst, 'map_name': map_name, 'map_save': save_map}],
         ),
 
-        # Node(
-        #     package='nav2_map_server',
-        #     executable='map_server',
-        #     name='map_server',
-        #     output='screen',
-        #     parameters=[{
-        #         'yaml_filename': hiwi_map,
-        #         'use_sim_time': use_sim_time,
-        #     }],
-        # ),
+        Node(
+            package='nav2_map_server',
+            executable='map_server',
+            name='map_server',
+            output='screen',
+            parameters=[{
+                'frame_id' : 'utm',
+                'yaml_filename': hiwi_map,
+                'use_sim_time': use_sim_time,
+            }],
+        ),
 
-        # Node(
-        #     package='nav2_amcl',
-        #     executable='amcl',
-        #     name='amcl',
-        #     output='screen',
-        #     parameters=[{
-        #         'use_sim_time': use_sim_time,
-        #         'base_frame_id': 'base_link',
-        #         'odom_frame_id': 'odom',
-        #         'global_frame_id': 'map',
-        #         'scan_topic': 'scan',
-        #         'map_topic': '/map',
-        #     }],
-        # ),
+        Node(
+            package='nav2_amcl',
+            executable='amcl',
+            name='amcl',
+            output='screen',
+            parameters=[{
+                'use_sim_time': use_sim_time,
+                'base_frame_id': 'base_link',
+                'odom_frame_id': 'odom',
+                'global_frame_id': 'utm',
+                'scan_topic': '/scan',
+                'map_topic': '/map',
+                'transform_tolerance': 0.3
+            }],
+        ),
 
-        # Node(
-        #     package='nav2_lifecycle_manager',
-        #     executable='lifecycle_manager',
-        #     name='lifecycle_manager_localization',
-        #     output='screen',
-        #     parameters=[{
-        #         'use_sim_time': use_sim_time,
-        #         'autostart': True,
-        #         'node_names': ['map_server','amcl'],
-        #     }],
-        # ),
+        Node(
+            package='nav2_lifecycle_manager',
+            executable='lifecycle_manager',
+            name='lifecycle_manager_localization',
+            output='screen',
+            parameters=[{
+                'use_sim_time': use_sim_time,
+                'autostart': True,
+                'node_names': ['map_server','amcl'],
+            }],
+        ),
+
+
+        
                 
         Node(
             package='rviz2',
@@ -295,26 +306,12 @@ def generate_launch_description():
             package='robot_localization',
             executable='navsat_transform_node',
             name='navsat_transform_node',
-            output='log',
-            parameters=[{
-                'world_frame_id': 'map',         # <-- 가장 중요!
-                'frequency': 30.0,
-                'delay': 0.0011,
-                'transform_timeout': 0.2,
-                'magnetic_declination_radians': 0.0,
-                'yaw_offset': 0.0,
-                'zero_altitude': True,
-                'broadcast_cartesian_transform': False,
-                'publish_filtered_gps': True,
-                'use_odometry_yaw': False,
-                'wait_for_datum': True,        # datum 관련 로그 및 동작 확인 위해 True 유지
-                'use_sim_time': False
-            }],
+            output='screen',
+            parameters=[navsat_config],
             remappings=[
-                ('gps/fix', '/fix'),
-                ('imu', '/imu_converted'),
-                ('odometry/filtered', '/odometry/filtered_local'),
-                ('odometry/gps', '/odometry/gps')
+                ('/gps/fix', '/fix'),
+                ('/imu/data', '/imu_converted'),
+                ('/odometry/filtered', '/odometry/filtered_local'),
             ],
          
         ),
@@ -327,7 +324,7 @@ def generate_launch_description():
             remappings=[('odometry/filtered', 'odometry/filtered_local')], # 출력 토픽 이름 변경
         ),
 
-        # 예시: Global EKF 노드 추가 (ekf_global.yaml 설정 필요)
+        
         Node(
             package='robot_localization',
             executable='ekf_node',

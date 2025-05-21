@@ -1,0 +1,54 @@
+/navsat_transform_node:
+  ros__parameters:
+    broadcast_cartesian_transform_as_parent_frame: false
+    broadcast_utm_transform: true
+    broadcast_utm_transform_as_parent_frame_: false
+    delay: 0.0011
+    frequency: 30.0
+    magnetic_declination_radians: -0.1457
+    publish_filtered_gps: true
+    qos_overrides:
+      /fix:
+        subscription:
+          depth: 1
+          history: keep_last
+          reliability: best_effort
+      /gps/filtered:
+        publisher:
+          depth: 10
+          history: keep_last
+          reliability: reliable
+      /imu:
+        subscription:
+          depth: 1
+          history: keep_last
+          reliability: best_effort
+      /odometry/filtered_local:
+        subscription:
+          depth: 1
+          history: keep_last
+          reliability: best_effort
+      /odometry/gps:
+        publisher:
+          depth: 10
+          history: keep_last
+          reliability: reliable
+      /parameter_events:
+        publisher:
+          depth: 1000
+          durability: volatile
+          history: keep_last
+          reliability: reliable
+      /tf_static:
+        publisher:
+          depth: 1
+          history: keep_last
+          reliability: reliable
+    transform_timeout: 0.2
+    use_local_cartesian: false
+    use_odometry_yaw: false
+    use_sim_time: false
+    wait_for_datum: false
+    yaw_offset: 0.0
+    zero_altitude: true
+

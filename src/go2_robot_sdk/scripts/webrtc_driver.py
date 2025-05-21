@@ -25,7 +25,7 @@
 # and https://github.com/legion1581/go2_webrtc_connect
 # Big thanks for your passion! @tfoldi (Földi Tamás) and @legion1581 (The RoboVerse Discord Group)
 
-import asyncio       
+
 import binascii
 import uuid
 import base64
@@ -227,10 +227,6 @@ class Go2Connection():
 
     def on_connection_state_change(self):
         logger.info(f"Connection state is {self.pc.connectionState}")
-        if self.pc.connectionState in ["failed", "closed", "disconnected"]:
-            logger.warning(f"[{self.robot_num}] Connection lost → Reconnecting...")
-            import asyncio
-            asyncio.create_task(self.reconnect())
 
     async def on_track(self, track):
         logger.info(f"Receiving {track.kind}")
@@ -286,50 +282,6 @@ class Go2Connection():
             await self.connect_with_ip()
         else:
             raise ValueError("Either robot_ip or (serial_number, email, password) must be provided.")
-        
-    async def reconnect(self):
-        for attempt in range(3):
-            self.logger.info("[%s] Reconnecting attempt %d...",
-                              self.robot_num, attempt + 1)
-
-            await asyncio.sleep(5)          # 네트워크 흔들림 안정화 대기
-
-            try:
-                # 1) 기존 PC 정리
-                if self.pc and self.pc.connectionState != "closed":
-                    await self.pc.close()
-
-                # 2) 새 PeerConnection 생성
-                self.pc = RTCPeerConnection()
-
-                # 3) 이벤트 리스너 재등록
-                self.pc.on("track", self.on_track)
-                self.pc.on("connectionstatechange",
-                           self.on_connection_state_change)
-
-                # 4) 비디오 트랜시버/데이터채널 재등록
-                if self.on_video_frame:
-                    self.pc.addTransceiver("video", direction="recvonly")
-
-                self.data_channel = self.pc.createDataChannel("data", id=0)
-                self.data_channel.on("open", self.on_data_channel_open)
-                self.data_channel.on("message", self.on_data_channel_message)
-
-                # 5) ICE/SDP 재협상
-                await self.connect()
-
-                self.logger.info("[%s] Reconnection successful", self.robot_num)
-                return                      # 성공했으면 함수 종료
-
-            except Exception as e:
-                # ⬇ 더 이상 'import asyncio' 를 넣지 마세요! (버그 원인)
-                self.logger.error("[%s] Reconnection failed on attempt %d: %s",
-                                  self.robot_num, attempt + 1, e)
-                await asyncio.sleep(2)      # 실패 시 짧은 쿨다운
-
-        self.logger.error("[%s] Reconnection failed after 3 attempts. Giving up.",
-                          self.robot_num)
-
 
     async def connect_with_ip(self):
         logging.info("Trying to send SDP using IP-based method...")
@@ -400,8 +352,7 @@ class Go2Connection():
             ]
         )
         self.pc = RTCPeerConnection(configuration)
-
-        self.pc.on("track", self.on_track)
+        self.pc.on("track",                self.on_track)
         self.pc.on("connectionstatechange", self.on_connection_state_change)
         # 비디오 트랜시버 추가
         if self.on_video_frame:
@@ -416,6 +367,7 @@ class Go2Connection():
         await self.pc.setLocalDescription(offer)
         logger.info(f"SDP Offer: {self.pc.localDescription.sdp}")
         # SDP 응답 수신 후
+        
         sdp_offer_json = {
             "id": "",
             "turnserver": turn_info,
@@ -429,15 +381,12 @@ class Go2Connection():
         sdp_answer = send_sdp_to_remote_peer(self.serial_number, sdp_offer, self.token, public_key)
         if not sdp_answer:
             raise ValueError("Failed to get SDP answer from remote peer")
-        
-        logger.info(f"Received SDP Answer: {sdp_answer}")  # 정의 후 호출
-
+        logger.info(f"Received SDP Answer: {sdp_answer}")
         # SDP 응답 설정
         peer_answer = json.loads(sdp_answer)
         answer = RTCSessionDescription(sdp=peer_answer['sdp'], type=peer_answer['type'])
         await self.pc.setRemoteDescription(answer)
         logger.info("Successfully connected via serial number")
-        
 
     def validate_robot_conn(self, message):
         if message.get("data") == "Validation Ok.":
