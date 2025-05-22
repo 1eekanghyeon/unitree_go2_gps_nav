@@ -1,7 +1,0 @@
-image: testmap.pgm
-resolution: 0.04983398968590082
-origin: [380590.9951246835, 3848833.507823656, 0.0]
-negate: 0
-occupied_thresh: 0.65
-free_thresh: 0.25
-# mode: trinary # 기본값이므로 생략해도 됩니다.
