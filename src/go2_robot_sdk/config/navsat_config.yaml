@@ -8,9 +8,9 @@ navsat_transform_node:
     transform_timeout: 0.2 
     magnetic_declination_radians: 0.0           
     zero_altitude: true                
-    broadcast_cartesian_transform: true
-    broadcast_utm_transform: false
-    broadcast_utm_transform_as_parent_frame_: false
+    broadcast_cartesian_transform: false
+    broadcast_utm_transform: true
+    broadcast_utm_transform_as_parent_frame_: true
     publish_filtered_gps: true          
     use_odometry_yaw: true             
     wait_for_datum: false       

@@ -348,6 +348,7 @@ waypoint_follower:
     use_sim_time: False
     loop_rate: 20
     stop_on_failure: false
+    global_frame_id: utm  
     waypoint_task_executor_plugin: "wait_at_waypoint"
     wait_at_waypoint:
       plugin: "nav2_waypoint_follower::WaitAtWaypoint"

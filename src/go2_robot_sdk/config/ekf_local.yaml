@@ -17,7 +17,7 @@ ekf_local_node:
     publish_tf: true 
 
     # 입력 센서 설정
-    odom0: /odom_fused
+    odom0: /odom
     odom0_config: [true, true, false,  
                    false, false, true,  
                    true,  true,  false,  

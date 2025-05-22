@@ -393,7 +393,7 @@ def generate_launch_description():
             executable='waypoint_follower',
             name='waypoint_follower',
             output='screen',
-            parameters=[{'use_sim_time': False, 'stop_on_failure': True}]
+            parameters=[nav2_config]
         ),
         TimerAction(
             period=5.0,

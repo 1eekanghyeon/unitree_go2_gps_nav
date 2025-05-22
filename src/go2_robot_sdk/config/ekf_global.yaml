@@ -16,7 +16,7 @@ ekf_global_node:
     publish_tf: false            
 
 
-    odom0: /odom_fused
+    odom0: /odom
     odom0_config: [true, true, false,  
                    false, false, true,  
                    true,  true,  false,  
