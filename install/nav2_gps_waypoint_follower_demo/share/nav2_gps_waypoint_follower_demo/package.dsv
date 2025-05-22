@@ -1,6 +1,0 @@
-source;share/nav2_gps_waypoint_follower_demo/hook/pythonpath.ps1
-source;share/nav2_gps_waypoint_follower_demo/hook/pythonpath.dsv
-source;share/nav2_gps_waypoint_follower_demo/hook/pythonpath.sh
-source;share/nav2_gps_waypoint_follower_demo/hook/ament_prefix_path.ps1
-source;share/nav2_gps_waypoint_follower_demo/hook/ament_prefix_path.dsv
-source;share/nav2_gps_waypoint_follower_demo/hook/ament_prefix_path.sh

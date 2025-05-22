@@ -1,2 +1,0 @@
-go2_robot_sdk
-scripts

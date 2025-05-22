@@ -1,2 +1,13 @@
 install/go2_robot_sdk/share/go2_robot_sdk/config/testmap.pgm
 src/go2_robot_sdk/config/testmap.pgm
+/build/
+/install/
+/log/
+
+# Python 캐시
+**/__pycache__/
+/**/*.pyc
+
+# 기타 ROS2 .env, egg-info 등
+**/*.env
+**/*.egg-info/

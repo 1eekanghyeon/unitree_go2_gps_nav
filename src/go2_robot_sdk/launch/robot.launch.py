@@ -204,7 +204,6 @@ def generate_launch_description():
                     output='screen',
                 ),
             )
-
     return LaunchDescription([
 
         *urdf_launch_nodes,
@@ -239,21 +238,21 @@ def generate_launch_description():
             }],
         ),
 
-        Node(
-            package='nav2_amcl',
-            executable='amcl',
-            name='amcl',
-            output='screen',
-            parameters=[{
-                'use_sim_time': use_sim_time,
-                'base_frame_id': 'base_link',
-                'odom_frame_id': 'odom',
-                'global_frame_id': 'utm',
-                'scan_topic': '/scan',
-                'map_topic': '/map',
-                'transform_tolerance': 0.3
-            }],
-        ),
+        # Node(
+        #     package='nav2_amcl',
+        #     executable='amcl',
+        #     name='amcl',
+        #     output='screen',
+        #     parameters=[{
+        #         'use_sim_time': use_sim_time,
+        #         'base_frame_id': 'base_link',
+        #         'odom_frame_id': 'odom',
+        #         'global_frame_id': 'utm',
+        #         'scan_topic': '/scan',
+        #         'map_topic': '/map',
+        #         'transform_tolerance': 0.3
+        #     }],
+        # ),
 
         Node(
             package='nav2_lifecycle_manager',
@@ -263,12 +262,11 @@ def generate_launch_description():
             parameters=[{
                 'use_sim_time': use_sim_time,
                 'autostart': True,
-                'node_names': ['map_server','amcl'],
+                'node_names': ['map_server'],
             }],
         ),
 
 
-        
                 
         Node(
             package='rviz2',
@@ -324,6 +322,12 @@ def generate_launch_description():
             remappings=[('odometry/filtered', 'odometry/filtered_local')], # 출력 토픽 이름 변경
         ),
 
+         Node(
+            package='go2_robot_sdk',
+            executable='gps_heading_fuser',
+            name='gps_heading_fuser',
+            output='screen'
+        ),
         
         Node(
             package='robot_localization',
@@ -333,7 +337,7 @@ def generate_launch_description():
             parameters=[ekf_global_config], # 예: ekf_global.yaml
             remappings=[('odometry/filtered', 'odometry/global_filtered')] # 또는 Nav2가 사용할 이름
         ),
-            
+        
 
     
    

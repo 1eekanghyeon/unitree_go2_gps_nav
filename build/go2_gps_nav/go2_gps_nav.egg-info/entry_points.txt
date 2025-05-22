@@ -1,3 +1,0 @@
-[console_scripts]
-gps_navigation_node = go2_gps_nav.gps_navigation_node:main
-

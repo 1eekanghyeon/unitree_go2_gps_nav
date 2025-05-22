@@ -1,0 +1,7 @@
+waypoints:
+- latitude: 34.776923
+  longitude: 127.700497
+  yaw: 0.0       # 동쪽 바라보기
+- latitude: 34.776608
+  longitude: 127.700215
+  yaw: 1.57      # 북쪽 바라보기

@@ -1,3 +1,0 @@
-[console_scripts]
-coco_detector_node = coco_detector.coco_detector_node
-
