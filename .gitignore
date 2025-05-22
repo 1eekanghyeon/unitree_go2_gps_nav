@@ -10,4 +10,4 @@ src/go2_robot_sdk/config/testmap.pgm
 
 # 기타 ROS2 .env, egg-info 등
 **/*.env
-**/*.egg-info/
+**/*.egg-info/testmap.pgm
