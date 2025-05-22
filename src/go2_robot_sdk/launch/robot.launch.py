@@ -340,7 +340,7 @@ def generate_launch_description():
         
 
     
-   
+    
        
 
         Node(
@@ -387,4 +387,23 @@ def generate_launch_description():
                 'use_sim_time': use_sim_time,
             }.items(),
         ),
+
+        Node(
+            package='nav2_waypoint_follower',
+            executable='waypoint_follower',
+            name='waypoint_follower',
+            output='screen',
+            parameters=[{'use_sim_time': False, 'stop_on_failure': True}]
+        ),
+        TimerAction(
+            period=5.0,
+            actions=[
+                Node(
+                    package='go2_robot_sdk',               # 본인 패키지명
+                    executable='osrm_autopilot_node',   # 스크립트 이름
+                    name='osrm_autopilot_node',
+                    output='screen'
+                )
+            ]
+        ),   
     ])

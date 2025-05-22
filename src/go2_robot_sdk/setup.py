@@ -64,6 +64,7 @@ setup(
             'gps_node = go2_robot_sdk.gps:main',
             'imu_converter_node = go2_robot_sdk.imu_converter_node:main',
             'gps_heading_fuser = go2_robot_sdk.gps_heading_fuser:main',
+            'osrm_autopilot_node     = go2_robot_sdk.osrm_autopilot_node:main',
         ],
     },
 )
