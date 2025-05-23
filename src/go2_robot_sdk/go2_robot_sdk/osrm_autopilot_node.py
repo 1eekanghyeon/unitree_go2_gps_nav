@@ -59,7 +59,7 @@ class OSRMAutopilot(Node):
         while rclpy.ok() and self.fix is None:
             rclpy.spin_once(self, timeout_sec=0.1)
         lat0, lon0 = self.fix.latitude, self.fix.longitude
-        e0, n0, _, _ = self.transformer.transform(lon0, lat0)
+        e0, n0 = self.transformer.transform(lon0, lat0)
 
         # 2) Drive straight until 1m movement
         twist = Twist()
@@ -71,7 +71,7 @@ class OSRMAutopilot(Node):
             rclpy.spin_once(self, timeout_sec=0.1)
             if self.fix is None:
                 continue
-            e1, n1, _, _ = self.transformer.transform(
+            e1, n1 = self.transformer.transform(
                 self.fix.longitude, self.fix.latitude
             )
             if math.hypot(e1 - e0, n1 - n0) >= 1.0:
@@ -86,7 +86,7 @@ class OSRMAutopilot(Node):
         dx = e1 - e0
         true_yaw = normalize_angle(math.atan2(dy, dx))
         self.get_logger().info(f'초기 true_yaw: {true_yaw:.3f} rad')
-        
+
         for _ in range(10):  # 10번 * 0.1초 = 최대 1초 대기
             if self.latest_odom_yaw is not None:
                 break
@@ -116,7 +116,7 @@ class OSRMAutopilot(Node):
             rclpy.spin_once(self, timeout_sec=0.1)
 
         # Calibrate initial yaw
-        self.calibrate_initial_yaw()
+        # self.calibrate_initial_yaw()
 
         # Proceed with OSRM routing...
         lat0, lon0 = self.fix.latitude, self.fix.longitude
@@ -139,28 +139,36 @@ class OSRMAutopilot(Node):
             return
 
         # Build PoseStamped list in UTM-relative frame
-        x0, y0 = self.transformer.transform(lon0, lat0)
+        # Build PoseStamped list in UTM absolute frame
         poses = []
-        for i, (lon, lat) in enumerate(coords):
-            x, y = self.transformer.transform(lon, lat)
+        for i, (lon, lat) in enumerate(coords): # OSRM 경로의 각 (경도, 위도) 좌표
+            x_utm, y_utm = self.transformer.transform(lon, lat) # (경도, 위도)를 절대 UTM 좌표로 변환
+            
             ps = PoseStamped()
-            ps.header.frame_id = 'utm'
+            ps.header.frame_id = 'utm' # 글로벌 프레임
             ps.header.stamp = self.get_clock().now().to_msg()
-            ps.pose.position.x = x - x0
-            ps.pose.position.y = y - y0
+            
+            # 포지션을 절대 UTM 좌표로 설정
+            ps.pose.position.x = x_utm 
+            ps.pose.position.y = y_utm
+            ps.pose.position.z = 0.0 # 2D 주행이므로 Z는 0 또는 관련 값으로 설정
+            
             # Compute orientation toward next point
             if i < len(coords) - 1:
                 lon2, lat2 = coords[i+1]
-                x2, y2 = self.transformer.transform(lon2, lat2)
-                yaw = math.atan2(y2 - y, x2 - x)
-            else:
+                x2_utm, y2_utm = self.transformer.transform(lon2, lat2)
+                # 절대 UTM 좌표를 사용하여 다음 지점까지의 각도 계산
+                yaw = math.atan2(y2_utm - y_utm, x2_utm - x_utm) 
+            elif poses: 
+                q_prev = poses[-1].pose.orientation
+                _, _, yaw = euler_from_quaternion([q_prev.x, q_prev.y, q_prev.z, q_prev.w])
+            else: 
                 yaw = 0.0
+
             yaw = normalize_angle(yaw)
-            ps.pose.orientation = Quaternion(
-                x=0.0, y=0.0,
-                z=math.sin(yaw / 2.0),
-                w=math.cos(yaw / 2.0)
-            )
+            q = quaternion_from_euler(0, 0, yaw) # R, P, Y 순서
+            ps.pose.orientation = Quaternion(x=q[0], y=q[1], z=q[2], w=q[3])
+            
             poses.append(ps)
 
         # Send FollowWaypoints action
@@ -184,6 +192,20 @@ class OSRMAutopilot(Node):
         result = future.result().result
         self.get_logger().info(f'FollowWaypoints 결과: {result}')
 
+    def fix_cb(self, msg: NavSatFix):
+        # GPS Fix 메시지가 들어올 때마다 self.fix 에 저장
+        self.fix = msg
+        self.get_logger().debug(f'[fix_cb] lat={msg.latitude}, lon={msg.longitude}')
+
+    def goal_cb(self, msg: String):
+        # "/autopilot/goal" 토픽에 "37.1234,127.5678" 같은 문자열이 온다고 가정
+        try:
+            lat_str, lon_str = msg.data.split(',')
+            self.goal_lat = float(lat_str)
+            self.goal_lon = float(lon_str)
+            self.get_logger().info(f'Goal set → lat:{self.goal_lat}, lon:{self.goal_lon}')
+        except Exception as e:
+            self.get_logger().error(f'Goal 파싱 실패: {e}')
 
 def main():
     rclpy.init()

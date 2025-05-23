@@ -388,22 +388,20 @@ def generate_launch_description():
             }.items(),
         ),
 
+        # Node(
+        #     package='nav2_waypoint_follower',
+        #     executable='waypoint_follower',
+        #     name='waypoint_follower',
+        #     output='screen',
+        #     parameters=[nav2_config]
+        # ),
+    
         Node(
-            package='nav2_waypoint_follower',
-            executable='waypoint_follower',
-            name='waypoint_follower',
-            output='screen',
-            parameters=[nav2_config]
+            package='go2_robot_sdk',               # 본인 패키지명
+            executable='osrm_autopilot_node',   # 스크립트 이름
+            name='osrm_autopilot_node',
+            output='screen'
         ),
-        TimerAction(
-            period=5.0,
-            actions=[
-                Node(
-                    package='go2_robot_sdk',               # 본인 패키지명
-                    executable='osrm_autopilot_node',   # 스크립트 이름
-                    name='osrm_autopilot_node',
-                    output='screen'
-                )
-            ]
-        ),   
+            
+        
     ])

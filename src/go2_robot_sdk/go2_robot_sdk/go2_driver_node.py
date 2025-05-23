@@ -515,7 +515,7 @@ class RobotBaseNode(Node):
                 odom_msg.twist.covariance = [0.0] * 36
                 odom_msg.twist.covariance[0] = 0.000001   # vx 선속도 분산 (0.05 m/s 표준편차)
                 odom_msg.twist.covariance[7] = 0.000001   # vy 선속도 분산
-                odom_msg.twist.covariance[14] = 0.1  # vz 선속도 분산
+                odom_msg.twist.covariance[14] = 0.000001  # vz 선속도 분산
                 odom_msg.twist.covariance[21] = 0.0001 # vroll 각속도 분산 (약 0.57도/s 표준편차)
                 odom_msg.twist.covariance[28] = 0.0001 # vpitch 각속도 분산
                 odom_msg.twist.covariance[35] = 0.0004 # vyaw 각속도 분산

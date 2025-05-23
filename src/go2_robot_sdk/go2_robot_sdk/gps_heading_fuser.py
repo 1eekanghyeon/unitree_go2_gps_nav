@@ -27,9 +27,9 @@ class GPSHeadingFuser(Node):
         # Yaw offset
         self.offset = 0.0
         # Movement thresholds
-        self.distance_threshold = 1.0  # meters
+        self.distance_threshold = 2.0  # meters
         self.linear_threshold = 0.1    # m/s
-        self.angular_threshold = 0.05  # rad/s
+        self.angular_threshold = 0.0  # rad/s
 
         # Subscriptions
         self.create_subscription(
