@@ -7,23 +7,40 @@ import wave
 import whisper
 import openai
 import json
-import faiss
-import os
-import numpy as np
-from sentence_transformers import SentenceTransformer
 import requests
 from datetime import datetime
 import difflib
+import os
+import re
+import faiss
+import numpy as np
+from sentence_transformers import SentenceTransformer
 
 # ───── 설정 ─────
 PORT = 5050
 SAVE_PATH = "/tmp/received.wav"
+TRIGGER_SERVER_URL = "http://10.8.0.2:9000/destination"  # 꼭 실제 Xavier IP로 변경!
+# TRIGGER_SERVER_URL = "http://192.168.0.27:9000/destination" # 꼭 실제 Xavier IP로 변경!
+CAMERA_SERVER_HOST = "10.8.0.2"   # 카메라 제어 서버 IP
+CAMERA_SERVER_PORT = 8001             # 카메라 제어 포트
+POST_TIMEOUT = 10
 
-client = openai.OpenAI(api_key="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")
-embedding_model = SentenceTransformer("intfloat/multilingual-e5-small")
-index = faiss.read_index("rag_index_local.faiss")
-with open("rag_docs_local.json", "r", encoding="utf-8") as f:
-    rag_docs = json.load(f)
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+OPENWEATHER_API_KEY = os.environ.get("OPENWEATHER_API_KEY")
+
+client = openai.OpenAI(api_key=OPENAI_API_KEY)
+
+# ---- 앱 건물 json 기반 건물 정보 로드 ----
+curdir = os.path.dirname(os.path.abspath(__file__))
+BUILDING_JSON_PATH = "/home/hiwilab/Project/DOG/ros2_ws/src/go2_robot_sdk/go2_robot_sdk/buildingData.json"
+try:
+    with open(BUILDING_JSON_PATH, "r", encoding="utf-8") as f:
+        building_data = json.load(f)
+    BUILDING_LIST = [b["name"]["ko"] for b in building_data if b.get("name") and b["name"].get("ko")]
+except Exception as e:
+    print("[❌ BUILDING_LIST 생성 실패]", e)
+    building_data = []
+    BUILDING_LIST = []
 
 try:
     with open("stt_correction_map.json", "r", encoding="utf-8") as f:
@@ -31,7 +48,15 @@ try:
 except FileNotFoundError:
     stt_correction_map = {}
 
-OPENWEATHER_API_KEY = "a5b9e7179ee7c8c5169549d8add05a8b"
+# 🟢 추가: 임베딩 모델/FAISS 인덱스/문서 불러오기
+try:
+    embedding_model = SentenceTransformer("intfloat/multilingual-e5-small")
+    index = faiss.read_index("rag_index_local.faiss")
+    with open("rag_docs_local.json", "r", encoding="utf-8") as f:
+        rag_docs = json.load(f)
+except Exception as e:
+    print("[❌ 임베딩 시스템 로드 실패]", e)
+    embedding_model, index, rag_docs = None, None, []
 
 # ───── 유틸 함수 ─────
 def apply_stt_corrections(text, correction_map, similarity_threshold=0.8):
@@ -45,10 +70,13 @@ def apply_stt_corrections(text, correction_map, similarity_threshold=0.8):
             corrected.append(correction_map[match[0]] if match else word)
     return " ".join(corrected)
 
+# 🟢 추가: 텍스트 임베딩 + FAISS 검색
 def get_embedding_local(text):
     return embedding_model.encode(["query: " + text], convert_to_numpy=True)[0]
 
 def retrieve_docs_faiss(query, top_k=7):
+    if embedding_model is None or index is None or not rag_docs:
+        return []
     q_emb = get_embedding_local(query).reshape(1, -1).astype(np.float32)
     D, I = index.search(q_emb, top_k)
     return [rag_docs[i] for i in I[0]]
@@ -116,6 +144,52 @@ Avoid overexplaining or offering unnecessary suggestions. Do not exceed 200 toke
     )
     return response.choices[0].message.content.strip()
 
+# ───── 건물 전체 정보 추출 함수 ─────
+def normalize(text):
+    return re.sub(r'\s+', '', text).lower()
+
+def find_building_info_by_ko_name(text):
+    norm_text = normalize(text)
+    for entry in building_data:
+        bname = entry.get("name", {}).get("ko", "")
+        if bname and normalize(bname) in norm_text:
+            return entry
+    return None
+    
+# ───── 카메라 트리거 전송 (전역 함수) ─────
+def send_camera_trigger(logger):
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.connect((CAMERA_SERVER_HOST, CAMERA_SERVER_PORT))
+            s.sendall(b"camera")
+        logger.info("📸 카메라 트리거 ‘CAMERA’ 전송 성공")
+    except Exception as e:
+        logger.warn(f"❌ 카메라 트리거 전송 실패: {e}")
+
+        
+# ───── 앱 트리거 전송 함수 (전체 정보 전송) ─────
+def send_navigation_trigger_to_app(logger, building_info=None):
+    if building_info:
+        msg = {
+            "id": building_info.get("id", ""),
+            "name": building_info.get("name", {}),
+            "target": building_info.get("position"),
+            "description": building_info.get("description", {}),
+            "image": building_info.get("image", ""),
+            "trigger": True
+        }
+    else:
+        msg = {"trigger": True}
+    try:
+        res = requests.post(TRIGGER_SERVER_URL, json=msg, timeout=POST_TIMEOUT)
+        if res.status_code == 200:
+            logger.info(f"📨 목적지 데이터 전송 성공 (status 200, target={msg.get('target')})")
+        else:
+            logger.warn(f"❌ 목적지 데이터 전송 실패 (status {res.status_code})")
+    except Exception as e:
+        logger.warn(f"❌ 목적지 데이터 전송 실패: {e}")
+    send_camera_trigger(logger)
+    
 # ───── ROS2 노드 ─────
 class WhisperGPTNode(Node):
     def __init__(self):
@@ -126,6 +200,8 @@ class WhisperGPTNode(Node):
         self.get_logger().info("🧠 WhisperGPTNode 시작됨 (포트 5050 대기 중)")
         self.model = whisper.load_model("large")
         self.start_socket_server()
+        
+    
 
     def start_socket_server(self):
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -151,9 +227,8 @@ class WhisperGPTNode(Node):
                             break
                 finally:
                     conn.close()
-                if audio_data:  # 수신된 오디오가 있을 때만 "Okay" 전송
-                    confirmation_tts_message = "Okay"  # "네" 또는 "알겠습니다" 등으로 변경 가능
-                    self.tts_pub.publish(String(data=confirmation_tts_message))
+                if audio_data:
+                    self.tts_pub.publish(String(data="네"))
                 self.save_audio(audio_data)
                 text = self.transcribe_audio()
                 self.get_logger().info(f"📝 인식 결과: {text}")
@@ -178,7 +253,23 @@ class WhisperGPTNode(Node):
         return result["text"].strip()
 
     def send_command_or_gpt(self, text):
+        building_info = None
         cmd = text.replace(" ", "")
+        # 🟢 길안내 트리거 감지 시 buildingData.json에서 전체 정보 추출해서 앱에 전송
+        if "길안내" in cmd or "길 안내" in cmd or "가는길" in cmd:
+            building_info = find_building_info_by_ko_name(text)
+            if building_info:
+                send_navigation_trigger_to_app(self.get_logger(), building_info=building_info)
+                if building_info.get("name", {}).get("ko"):
+                    self.tts_pub.publish(String(data=f"{building_info['name']['ko']}까지 안내를 시작할게요. 저를 따라와 주세요!"))
+                else:
+                    self.tts_pub.publish(String(data="목적지까지 길 안내를 시작할게요. 저를 따라와 주세요!"))
+            else:
+                self.tts_pub.publish(String(data="죄송해요, 해당 건물을 찾을 수 없어요. 다시 말씀해주시겠어요?"))
+                self.get_logger().warn("❌ 데이터에 없는 건물명 → 안내 미실행")
+            return
+
+        # 이하 기존 명령어/대화 응답 등 유지 + ★임베딩 기반 RAG 답변 복구
         if "앉아" in cmd:
             self.send_motion_command(api_id=1009)
         elif "엎드려" in cmd:
@@ -198,18 +289,11 @@ class WhisperGPTNode(Node):
             self.get_logger().info(f"🗣 GPT 응답: {reply}")
             self.tts_pub.publish(String(data=reply))
 
-    def send_motion_command(self, api_id, parameter="{}", topic='rt/api/sport/request'):
-        msg = WebRtcReq()
-        msg.id = 0
-        msg.topic = topic
-        msg.api_id = api_id
-        msg.parameter = parameter
-        msg.priority = 0
-        self.motion_pub.publish(msg)
-
+    # 🟢 RAG + 임베딩 기반 답변 복구
     def generate_rag_response(self, raw_text):
         corrected = apply_stt_corrections(raw_text, stt_correction_map)
         weather_info = get_weather_openweather(OPENWEATHER_API_KEY) if is_weather_related(corrected) else None
+        # ✅ FAISS+임베딩 검색 반영 (없을 때는 빈 리스트 fallback)
         top_docs = retrieve_docs_faiss(corrected, top_k=5)
         return ask_gpt_with_rag(corrected, [f"passage: {doc['text']}" for doc in top_docs], weather_info)
 
@@ -226,3 +310,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+

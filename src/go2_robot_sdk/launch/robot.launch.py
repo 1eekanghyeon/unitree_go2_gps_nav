@@ -36,7 +36,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     with_rviz2 = LaunchConfiguration('rviz2', default='true')
     with_nav2 = LaunchConfiguration('nav2', default='true')
-    with_slam = LaunchConfiguration('slam', default='false')
+    with_slam = LaunchConfiguration('slam', default='true')
     with_foxglove = LaunchConfiguration('foxglove', default='true')
     with_joystick = LaunchConfiguration('joystick', default='true')
     with_teleop = LaunchConfiguration('teleop', default='true')
@@ -300,43 +300,43 @@ def generate_launch_description():
             ],
         ),
 
-        Node(
-            package='robot_localization',
-            executable='navsat_transform_node',
-            name='navsat_transform_node',
-            output='screen',
-            parameters=[navsat_config],
-            remappings=[
-                ('/gps/fix', '/fix'),
-                ('/imu/data', '/imu_converted'),
-                ('/odometry/filtered', '/odometry/filtered_local'),
-            ],
+        # Node(
+        #     package='robot_localization',
+        #     executable='navsat_transform_node',
+        #     name='navsat_transform_node',
+        #     output='screen',
+        #     parameters=[navsat_config],
+        #     remappings=[
+        #         ('/gps/fix', '/fix'),
+        #         ('/imu/data', '/imu_converted'),
+        #         ('/odometry/filtered', '/odometry/filtered_local'),
+        #     ],
          
-        ),
-        Node(
-            package='robot_localization',
-            executable='ekf_node',
-            name='ekf_local_node', # YAML 파일의 최상위 키와 일치시킴 (또는 원하는 이름 사용)
-            output='screen',
-            parameters=[ekf_local_config],
-            remappings=[('odometry/filtered', 'odometry/filtered_local')], # 출력 토픽 이름 변경
-        ),
+        # ),
+        # Node(
+        #     package='robot_localization',
+        #     executable='ekf_node',
+        #     name='ekf_local_node', # YAML 파일의 최상위 키와 일치시킴 (또는 원하는 이름 사용)
+        #     output='screen',
+        #     parameters=[ekf_local_config],
+        #     remappings=[('odometry/filtered', 'odometry/filtered_local')], # 출력 토픽 이름 변경
+        # ),
 
-         Node(
-            package='go2_robot_sdk',
-            executable='gps_heading_fuser',
-            name='gps_heading_fuser',
-            output='screen'
-        ),
+        #  Node(
+        #     package='go2_robot_sdk',
+        #     executable='gps_heading_fuser',
+        #     name='gps_heading_fuser',
+        #     output='screen'
+        # ),
         
-        Node(
-            package='robot_localization',
-            executable='ekf_node',
-            name='ekf_global_node', # 또는 'ekf_filter_node_map' 등
-            output='screen',
-            parameters=[ekf_global_config], # 예: ekf_global.yaml
-            remappings=[('odometry/filtered', 'odometry/global_filtered')] # 또는 Nav2가 사용할 이름
-        ),
+        # Node(
+        #     package='robot_localization',
+        #     executable='ekf_node',
+        #     name='ekf_global_node', # 또는 'ekf_filter_node_map' 등
+        #     output='screen',
+        #     parameters=[ekf_global_config], # 예: ekf_global.yaml
+        #     remappings=[('odometry/filtered', 'odometry/global_filtered')] # 또는 Nav2가 사용할 이름
+        # ),
         
 
     
@@ -351,12 +351,12 @@ def generate_launch_description():
         ),
 
         # 8) IMU Converter Node (imu_converter_node.py)
-        Node(
-            package='go2_robot_sdk',
-            executable='imu_converter_node',
-            name='imu_converter_node',
-            output='screen'
-        ),
+        # Node(
+        #     package='go2_robot_sdk',
+        #     executable='imu_converter_node',
+        #     name='imu_converter_node',
+        #     output='screen'
+        # ),
 
         IncludeLaunchDescription(
             FrontendLaunchDescriptionSource(foxglove_launch),
@@ -396,12 +396,12 @@ def generate_launch_description():
         #     parameters=[nav2_config]
         # ),
     
-        Node(
-            package='go2_robot_sdk',               # 본인 패키지명
-            executable='osrm_autopilot_node',   # 스크립트 이름
-            name='osrm_autopilot_node',
-            output='screen'
-        ),
+        # Node(
+        #     package='go2_robot_sdk',               # 본인 패키지명
+        #     executable='osrm_autopilot_node',   # 스크립트 이름
+        #     name='osrm_autopilot_node',
+        #     output='screen'
+        # ),
             
         
     ])

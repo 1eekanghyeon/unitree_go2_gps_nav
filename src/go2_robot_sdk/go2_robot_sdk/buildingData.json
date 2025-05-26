@@ -1,0 +1,458 @@
+[
+  {
+     "id": "F01",
+     "name": {
+       "ko": "교양관",
+       "en": "Liberal Arts Hall",
+       "zh": "通识馆"
+     },
+     "description": {
+       "ko": "교양관은 교양과목 수업을 들을 수 있고 다양한 학문의 기초 교육이 이루어지는 건물입니다.",
+       "en": "The Liberal Arts Hall hosts general education courses and offers foundational education across various disciplines.",
+       "zh": "通识馆提供通识课程，是进行多学科基础教育的建筑。"
+     },
+     "position": [
+       34.77258425,
+       127.6992618
+     ],
+     "icon": "🏢",
+     "image": "/images/F01.jpg"
+   },
+   {
+     "id": "F02",
+     "name": {
+       "ko": "대학본부",
+       "en": "University Headquarters",
+       "zh": "大学本部"
+     },
+     "description": {
+       "ko": "대학본부는 학교의 주요 행정 업무와 운영을 총괄하는 중심 기관입니다.",
+       "en": "The University Headquarters is the central body that oversees the university's key administrative tasks and operations.",
+       "zh": "大学本部是统筹学校主要行政事务和运营的中心机构。"
+     },
+     "position": [
+       34.77509758,
+       127.699141
+     ],
+     "icon": "🏢",
+     "image": "/images/F02.jpg"
+   },
+   {
+     "id": "F03",
+     "name": {
+       "ko": "도서관",
+       "en": "Library",
+       "zh": "图书馆"
+     },
+     "description": {
+       "ko": "도서관은 개인 공부 및 도서, 자료 열람이 가능한 건물입니다.",
+       "en": "The library provides facilities for personal study and access to books and resources.",
+       "zh": "图书馆是供个人学习和阅览图书资料的场所。"
+     },
+     "position": [
+       34.77395506,
+       127.6995328
+     ],
+     "icon": "🏢",
+     "image": "/images/F03.jpg"
+   },
+   {
+     "id": "F04",
+     "name": {
+       "ko": "둔덕문",
+       "en": "Dundeok Gate",
+       "zh": "屯德门"
+     },
+      "description": {
+       "ko": "둔덕문은 생활관 및 운동장 방향의 출입문으로 대학교의 후문입니다.",
+       "en": "Dundeok Gate is the back entrance of the university, located near the dormitories and sports field.",
+       "zh": "屯德门是面向宿舍和运动场方向的出入口，是大学的后门。"
+     },
+     "position": [
+       34.77577857,
+       127.6963119
+     ],
+     "icon": "🏢",
+     "image": "/images/F04.jpg"
+   },
+   {
+     "id": "F05",
+     "name": {
+       "ko": "산학연구관",
+       "en": "Industry-Academia Research Center",
+       "zh": "产学研究馆"
+     },
+     "description": {
+       "ko": "산학연구관은 산학협력과 실용 연구를 위한 공간으로, 지역 산업과의 연계를 통해 기술 개발을 지원하는 시설입니다.",
+       "en": "This center supports practical research and industry-academic cooperation, aiding technology development in collaboration with local industries.",
+       "zh": "产学研究馆是进行产学合作与实用研究的场所，支持与地方产业的技术开发。"
+     },
+     "position": [
+       34.77558273,
+       127.7005953
+     ],
+     "icon": "🏢",
+     "image": "/images/F05.jpg"
+   },
+   {
+     "id": "F06",
+   "name": {
+     "ko": "생활관(열린학사)",
+     "en": "Dormitory (Open Hall)",
+     "zh": "宿舍（开放学舍）"
+   },
+     "description": {
+     "ko": "생활관(열린학사)는 학생들이 생활하는 기숙사입니다.",
+     "en": "The dormitory (Open Hall) is a residential facility for students.",
+     "zh": "宿舍（开放学舍）是供学生居住的设施。"
+   },
+     "position": [
+       34.77704458,
+       127.6979639
+     ],
+     "icon": "🏢",
+     "image": "/images/F06.jpg"
+   },
+   {
+     "id": "F07",
+   "name": {
+     "ko": "생활관(푸른학사)",
+     "en": "Dormitory (Blue Hall)",
+     "zh": "宿舍（蓝色学舍）"
+   },
+     "description": {
+     "ko": "생활관(푸른학사)는 학생들이 생활하는 기숙사입니다.",
+     "en": "The dormitory (Blue Hall) is a residential facility for students.",
+     "zh": "宿舍（蓝色学舍）是供学生居住的设施。"
+   },
+     "position": [
+       34.77778014,
+       127.6985874
+     ],
+     "icon": "🏢",
+     "image": "/images/F07.jpg"
+   },
+   {
+     "id": "F08",
+   "name": {
+     "ko": "수산해양관",
+     "en": "Marine Science Hall",
+     "zh": "水产海洋馆"
+   },
+     "description": {
+     "ko": "수산해양관은 해양 관련 학문과 연구를 위한 교육 및 실험 건물입니다.",
+     "en": "This hall supports education and research in marine-related disciplines.",
+     "zh": "水产海洋馆是用于进行海洋相关学科教育与研究的建筑。"
+   },
+     "position": [
+       34.77560479,
+       127.6998936
+     ],
+     "icon": "🏢",
+     "image": "/images/F08.jpg"
+   },
+   {
+      "id": "F09",
+   "name": {
+     "ko": "스포파크",
+     "en": "Sport Park",
+     "zh": "运动公园"
+   },
+     "description": {
+     "ko": "스포파크는 체육 활동과 여가를 위한 운동 및 스포츠 시설입니다.",
+     "en": "Sport Park is a facility for physical activity and recreation.",
+     "zh": "运动公园是用于体育活动和休闲的设施。"
+   },
+     "position": [
+       34.77397777,
+       127.6983259
+     ],
+     "icon": "🏢",
+     "image": "/images/F09.jpg"
+   },
+   {
+      "id": "F10",
+   "name": {
+     "ko": "소운동장",
+     "en": "Small Field",
+     "zh": "小操场"
+   },
+     "description": {
+     "ko": "소운동장은 소규모 스포츠 활동이 가능하고, 각종 행사가 열리는 장소입니다.",
+     "en": "The small field accommodates small-scale sports and various events.",
+     "zh": "小操场适用于小型体育活动和各类活动。"
+   },
+     "position": [
+       34.77340625,
+       127.699744
+     ],
+     "icon": "🏢",
+     "image": "/images/F10.jpg"
+   },
+   {
+      "id": "F11",
+   "name": {
+     "ko": "운동장",
+     "en": "Main Field",
+     "zh": "操场"
+   },
+      "description": {
+     "ko": "운동장은 체육 행사, 수업, 경기 등을 위한 넓은 야외 운동 시설입니다.",
+     "en": "The main field is a large outdoor space for classes, sports, and events.",
+     "zh": "操场是用于体育课程、活动和比赛的宽阔户外空间。"
+   },
+     "position": [
+       34.77399396,
+       127.6970725
+     ],
+     "icon": "🏢",
+     "image": "/images/F11.jpg"
+   },
+   {
+     "id": "F12",
+   "name": {
+     "ko": "이공학실습관",
+     "en": "Engineering Practice Hall",
+     "zh": "理工学实习馆"
+   },
+     "description": {
+     "ko": "이공학실습관은 공학계열 학과들의 실습동과 실험실이 있는 건물입니다.",
+     "en": "This hall houses labs and practice rooms for engineering majors.",
+     "zh": "理工学实习馆设有工程类专业的实验室和实训教室。"
+   },
+     "position": [
+       34.77774776,
+       127.7018672
+     ],
+     "icon": "🏢",
+     "image": "/images/F12.jpg"
+   },
+   {
+      "id": "F13",
+   "name": {
+     "ko": "이학관",
+     "en": "Science Hall",
+     "zh": "理学馆"
+   },
+     "description": {
+     "ko": "이학관은 다양한 전공 학과들이 있고, 전공, 교양수업을 들을수 있는 건물입니다.",
+     "en": "The Science Hall hosts various departments and lectures.",
+     "zh": "理学馆设有多个系所，进行专业和通识课程。"
+   },
+     "position": [
+       34.77596233,
+       127.6996344
+     ],
+     "icon": "🏢",
+     "image": "/images/F13.jpg"
+   },
+   {
+     "id": "F14",
+   "name": {
+     "ko": "인문사회과학관",
+     "en": "Humanities and Social Sciences Hall",
+     "zh": "人文社会科学馆"
+   },
+     "description": {
+     "ko": "인문사회과학관은 인문·사회계열 강의실과 교수 연구실이 있는 건물입니다.",
+     "en": "This hall includes classrooms and offices for humanities and social science departments.",
+     "zh": "人文社会科学馆包含人文与社会系的教室和研究室。"
+   },
+     "position": [
+       34.77251989,
+       127.6983027
+     ],
+     "icon": "🏢",
+     "image": "/images/F14.jpg"
+   },
+   {
+     "id": "F15",
+   "name": {
+     "ko": "정문",
+     "en": "Main Gate",
+     "zh": "正门"
+   },
+      "description": {
+     "ko": "학교의 주 출입문입니다.",
+     "en": "The main entrance of the university.",
+     "zh": "学校的主出入口。"
+   },
+     "position": [
+       34.77360085,
+       127.7011712
+     ],
+     "icon": "🏢",
+     "image": "/images/F15.jpg"
+   },
+   {
+     "id": "F16",
+   "name": {
+     "ko": "제1공학관",
+     "en": "Engineering Building 1",
+     "zh": "第一工程馆"
+   },
+     "description": {
+     "ko": "전남대학교 공학대학 전공 학과들이 있고, 전공수업 및 실습이 이루어지는 건물입니다.",
+     "en": "Engineering Building 1 houses various departments and classrooms for engineering majors.",
+     "zh": "第一工程馆设有多所工科学院的教室和实训设施。"
+   },
+     "position": [
+       34.77674039,
+       127.7003129
+     ],
+     "icon": "🏢",
+     "image": "/images/F16.jpg"
+   },
+   {
+     "id": "F17",
+   "name": {
+     "ko": "제2공학관",
+     "en": "Engineering Building 2",
+     "zh": "第二工程馆"
+   },
+     "description": {
+     "ko": "전남대학교 공학대학 전공 학과들이 있고, 전공수업 및 실습이 이루어지는 건물입니다.",
+     "en": "Engineering Building 2 houses additional engineering departments and practice rooms.",
+     "zh": "第二工程馆设有工程学院的其他系和实习室。"
+   },
+     "position": [
+       34.77659373,
+       127.7011282
+     ],
+     "icon": "🏢",
+     "image": "/images/F17.jpg"
+   },
+   {
+     "id": "F18",
+   "name": {
+     "ko": "제3공학관",
+     "en": "Engineering Building 3",
+     "zh": "第三工程馆"
+   },
+     "description": {
+     "ko": "전남대학교 공학대학 전공 학과들이 있고, 전공수업 및 실습이 이루어지는 건물입니다.",
+     "en": "Engineering Building 3 includes classrooms and labs for engineering education.",
+     "zh": "第三工程馆包含工程教学的教室和实验室。"
+   },
+     "position": [
+       34.77722193,
+       127.7012182
+     ],
+     "icon": "🏢",
+     "image": "/images/F18.jpg"
+   },
+   {
+     "id": "F19",
+   "name": {
+     "ko": "청경마루",
+     "en": "Cheonggyeong Maru",
+     "zh": "青景楼"
+   },
+     "description": {
+     "ko": "청경마루는 학생들을 위한 복합 편의시설입니다.",
+     "en": "Cheonggyeong Maru is a multi-purpose facility for student convenience.",
+     "zh": "青景楼是为学生提供便利的综合设施。"
+   },
+     "position": [
+       34.77645401,
+       127.6991688
+     ],
+     "icon": "🏢",
+     "image": "/images/F19.jpg"
+   },
+   {
+     "id": "F20",
+   "name": {
+     "ko": "체육관",
+     "en": "Gymnasium",
+     "zh": "体育馆"
+   },
+     "description": {
+     "ko": "체육관은 실내 스포츠 활동이 가능한 시설입니다.",
+     "en": "The gymnasium is an indoor facility for sports activities.",
+     "zh": "体育馆是可进行室内体育活动的场所。"
+   },
+     "position": [
+       34.77419442,
+       127.6978771
+     ],
+     "icon": "🏢",
+     "image": "/images/F20.jpg"
+   },
+   {
+     "id": "F21",
+   "name": {
+     "ko": "테니스코트",
+     "en": "Tennis Court",
+     "zh": "网球场"
+   },
+     "description": {
+     "ko": "테니스코트는 학생 및 교직원이 이용할 수 있는 테니스 연습장입니다.",
+     "en": "The tennis court is a facility for students and staff to practice tennis.",
+     "zh": "网球场供学生和教职员工使用。"
+   },
+     "position": [
+       34.77537912,
+       127.6972016
+     ],
+     "icon": "🏢",
+     "image": "/images/F21.jpg"
+   },
+   {
+     "id": "F22",
+   "name": {
+     "ko": "파워플랜트",
+     "en": "Power Plant",
+     "zh": "动力实训馆"
+   },
+     "description": {
+     "ko": "파워플랜트는 다양한 공정 실습을 하는 건물입니다.",
+     "en": "The power plant is a facility for various engineering process practices.",
+     "zh": "动力实训馆用于进行多种工程流程的实训操作。"
+   },
+     "position": [
+       34.77501971,
+       127.7017076
+     ],
+     "icon": "🏢",
+     "image": "/images/F22.jpg"
+   },
+   {
+     "id": "F23",
+   "name": {
+     "ko": "학생회관",
+     "en": "Student Union",
+     "zh": "学生会馆"
+   },
+     "description": {
+     "ko": "학생회관은 학생 복지, 자치 활동, 편의 시설이 모여 있는 학생 중심의 복합 공간입니다.",
+     "en": "The Student Union is a central space for student welfare, activities, and amenities.",
+     "zh": "学生会馆是学生福利、自治活动和便利设施的综合空间。"
+   },
+     "position": [
+       34.77357032,
+       127.698642
+     ],
+     "icon": "🏢",
+     "image": "/images/F23.jpg"
+   },
+   {
+     "id": "F24",
+   "name": {
+     "ko": "해안항만실험센터",
+     "en": "Coastal and Port Research Center",
+     "zh": "海岸港口实验中心"
+   },
+      "description": {
+     "ko": "해안항만실험센터는 해안·항만 관련 공학 연구와 실험을 수행하는 전문 연구 시설입니다.",
+     "en": "This center conducts specialized research and experiments in coastal and port engineering.",
+     "zh": "该中心专门从事海岸和港口工程的研究与实验。"
+   },
+     "position": [
+       34.77668698,
+       127.6978408
+     ],
+     "icon": "🏢",
+     "image": "/images/F24.jpg"
+   }
+]

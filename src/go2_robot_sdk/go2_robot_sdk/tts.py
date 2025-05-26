@@ -164,7 +164,7 @@ class TTSNode(Node):
         data = {
             "text": text,
             "model_id": "eleven_turbo_v2_5",
-            "voice_settings": {"stability": 0.85, "similarity_boost": 0.75, "speed":0.8},
+            "voice_settings": {"stability": 0.85, "similarity_boost": 0.75, "speed":0.9},
         }
 
         try:
@@ -245,7 +245,7 @@ class TTSNode(Node):
 
                 # Add a small delay between chunks to prevent flooding
                 #time.sleep(0.01)
-                time.sleep(0.25)
+                time.sleep(0.3)
 
             # Wait until playback finished
             audio = AudioSegment.from_wav(io.BytesIO(wav_data))

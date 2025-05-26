@@ -199,7 +199,7 @@ class RobotBaseNode(Node):
                             f'robot{i}/utlidar/voxel_map_compressed',
                             best_effort_qos))
 
-        # self.broadcaster = TransformBroadcaster(self, qos=qos_profile)
+        self.broadcaster = TransformBroadcaster(self, qos=qos_profile)
 
         self.bridge = CvBridge()
         self.camera_info = load_camera_info()
@@ -317,7 +317,7 @@ class RobotBaseNode(Node):
         odom_trans.transform.rotation.y = msg.pose.orientation.y
         odom_trans.transform.rotation.z = msg.pose.orientation.z
         odom_trans.transform.rotation.w = msg.pose.orientation.w
-        # self.broadcaster.sendTransform(odom_trans)
+        self.broadcaster.sendTransform(odom_trans)
 
     def publish_joint_state_cyclonedds(self, msg):
         joint_state = JointState()
@@ -445,7 +445,7 @@ class RobotBaseNode(Node):
                     i)]['data']['pose']['orientation']['z']
                 odom_trans.transform.rotation.w = self.robot_odom[str(
                     i)]['data']['pose']['orientation']['w']
-                # self.broadcaster.sendTransform(odom_trans)
+                self.broadcaster.sendTransform(odom_trans)
 
     def publish_odom_topic_webrtc(self):
         for i in range(len(self.robot_odom)):
@@ -477,48 +477,48 @@ class RobotBaseNode(Node):
                 odom_msg.pose.pose.orientation.w = self.robot_odom[str(
                     i)]['data']['pose']['orientation']['w']
                 
-                #      === 중요: Pose Covariance 채우기 ===
-                # 이 값들은 로봇 오도메트리의 불확실성을 나타냅니다. 실제 값은 튜닝이 필요합니다.
-                # 여기서는 대각선 요소에만 작은 값들을 할당합니다. (분산 값이므로 제곱 형태)
-                # (x, y, z, rot_x, rot_y, rot_z) 순서
-                odom_msg.pose.covariance = [0.0] * 36
-                odom_msg.pose.covariance[0] = 0.00001    # x 위치 분산 (0.1m 표준편차)
-                odom_msg.pose.covariance[7] = 0.00001  # y 위치 분산 (0.1m 표준편차)
-                odom_msg.pose.covariance[14] = 0.01   # z 위치 분산 (0.1m 표준편차) - 2D 모드가 아니면 사용
-                odom_msg.pose.covariance[21] = 0.0004  # roll 자세 분산 (약 1.8도 표준편차)
-                odom_msg.pose.covariance[28] = 0.0004  # pitch 자세 분산
-                odom_msg.pose.covariance[35] = 0.0025  # yaw 자세 분산 (yaw는 보통 더 불안정)
+                # #      === 중요: Pose Covariance 채우기 ===
+                # # 이 값들은 로봇 오도메트리의 불확실성을 나타냅니다. 실제 값은 튜닝이 필요합니다.
+                # # 여기서는 대각선 요소에만 작은 값들을 할당합니다. (분산 값이므로 제곱 형태)
+                # # (x, y, z, rot_x, rot_y, rot_z) 순서
+                # odom_msg.pose.covariance = [0.0] * 36
+                # odom_msg.pose.covariance[0] = 0.00001    # x 위치 분산 (0.1m 표준편차)
+                # odom_msg.pose.covariance[7] = 0.00001  # y 위치 분산 (0.1m 표준편차)
+                # odom_msg.pose.covariance[14] = 0.01   # z 위치 분산 (0.1m 표준편차) - 2D 모드가 아니면 사용
+                # odom_msg.pose.covariance[21] = 0.0004  # roll 자세 분산 (약 1.8도 표준편차)
+                # odom_msg.pose.covariance[28] = 0.0004  # pitch 자세 분산
+                # odom_msg.pose.covariance[35] = 0.0025  # yaw 자세 분산 (yaw는 보통 더 불안정)
 
-                if key in self.robot_sport_state and self.robot_sport_state[key]:
-                    vel = self.robot_sport_state[key]['data']['velocity']
-                    # 선속도
-                    odom_msg.twist.twist.linear.x  = float(vel[0])
-                    odom_msg.twist.twist.linear.y  = float(vel[1])
-                    odom_msg.twist.twist.linear.z  = float(vel[2])
-                    # 각속도는 Go2State 메시지에 없으니 0으로
-                    odom_msg.twist.twist.angular.x = 0.0
-                    odom_msg.twist.twist.angular.y = 0.0
-                    odom_msg.twist.twist.angular.z = 0.0
-                else:
-                    # fallback: 0으로
-                    odom_msg.twist.twist.linear.x = 0.0
-                    odom_msg.twist.twist.linear.y = 0.0
-                    odom_msg.twist.twist.linear.z = 0.0
-                    odom_msg.twist.twist.angular.x = 0.0
-                    odom_msg.twist.twist.angular.y = 0.0
-                    odom_msg.twist.twist.angular.z = 0.0
+                # if key in self.robot_sport_state and self.robot_sport_state[key]:
+                #     vel = self.robot_sport_state[key]['data']['velocity']
+                #     # 선속도
+                #     odom_msg.twist.twist.linear.x  = float(vel[0])
+                #     odom_msg.twist.twist.linear.y  = float(vel[1])
+                #     odom_msg.twist.twist.linear.z  = float(vel[2])
+                #     # 각속도는 Go2State 메시지에 없으니 0으로
+                #     odom_msg.twist.twist.angular.x = 0.0
+                #     odom_msg.twist.twist.angular.y = 0.0
+                #     odom_msg.twist.twist.angular.z = 0.0
+                # else:
+                #     # fallback: 0으로
+                #     odom_msg.twist.twist.linear.x = 0.0
+                #     odom_msg.twist.twist.linear.y = 0.0
+                #     odom_msg.twist.twist.linear.z = 0.0
+                #     odom_msg.twist.twist.angular.x = 0.0
+                #     odom_msg.twist.twist.angular.y = 0.0
+                #     odom_msg.twist.twist.angular.z = 0.0
 
 
-                # === 중요: Twist Covariance 채우기 ===
-                # 속도 정보의 불확실성을 나타냅니다. 실제 값은 튜닝이 필요합니다.
-                # (vx, vy, vz, v_rot_x, v_rot_y, v_rot_z) 순서
-                odom_msg.twist.covariance = [0.0] * 36
-                odom_msg.twist.covariance[0] = 0.000001   # vx 선속도 분산 (0.05 m/s 표준편차)
-                odom_msg.twist.covariance[7] = 0.000001   # vy 선속도 분산
-                odom_msg.twist.covariance[14] = 0.000001  # vz 선속도 분산
-                odom_msg.twist.covariance[21] = 0.0001 # vroll 각속도 분산 (약 0.57도/s 표준편차)
-                odom_msg.twist.covariance[28] = 0.0001 # vpitch 각속도 분산
-                odom_msg.twist.covariance[35] = 0.0004 # vyaw 각속도 분산
+                # # === 중요: Twist Covariance 채우기 ===
+                # # 속도 정보의 불확실성을 나타냅니다. 실제 값은 튜닝이 필요합니다.
+                # # (vx, vy, vz, v_rot_x, v_rot_y, v_rot_z) 순서
+                # odom_msg.twist.covariance = [0.0] * 36
+                # odom_msg.twist.covariance[0] = 0.000001   # vx 선속도 분산 (0.05 m/s 표준편차)
+                # odom_msg.twist.covariance[7] = 0.000001   # vy 선속도 분산
+                # odom_msg.twist.covariance[14] = 0.000001  # vz 선속도 분산
+                # odom_msg.twist.covariance[21] = 0.0001 # vroll 각속도 분산 (약 0.57도/s 표준편차)
+                # odom_msg.twist.covariance[28] = 0.0001 # vpitch 각속도 분산
+                # odom_msg.twist.covariance[35] = 0.0004 # vyaw 각속도 분산
 
                 self.go2_odometry_pub[i].publish(odom_msg)
 

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ae851eef1c048e9372124d51418bbf35 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ae851eef1c048e9372124d51418bbf35" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ae851eef1c048e9372124d51418bbf35 = L.map(
+                "map_ae851eef1c048e9372124d51418bbf35",
+                {
+                    center: [34.776675, 127.70052100000001],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 17,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f62d6ded64cea9eeac2ff713e8dc46f3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f62d6ded64cea9eeac2ff713e8dc46f3.addTo(map_ae851eef1c048e9372124d51418bbf35);
+        
+    
+            var marker_c38e206a424c24cf3b8712aff3b26d76 = L.marker(
+                [34.776718, 127.700795],
+                {
+}
+            ).addTo(map_ae851eef1c048e9372124d51418bbf35);
+        
+    
+            var icon_444067a8957c23b26ee4285a38d2578b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ffa578ee72c66891004b39dc2a54eb0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b28e47a6e22c0e35fe5c5aac3f88d3ee = $(`<div id="html_b28e47a6e22c0e35fe5c5aac3f88d3ee" style="width: 100.0%; height: 100.0%;">Start (34.77672, 127.70079)</div>`)[0];
+                popup_1ffa578ee72c66891004b39dc2a54eb0.setContent(html_b28e47a6e22c0e35fe5c5aac3f88d3ee);
+            
+        
+
+        marker_c38e206a424c24cf3b8712aff3b26d76.bindPopup(popup_1ffa578ee72c66891004b39dc2a54eb0)
+        ;
+
+        
+    
+    
+                marker_c38e206a424c24cf3b8712aff3b26d76.setIcon(icon_444067a8957c23b26ee4285a38d2578b);
+            
+    
+            var marker_0ce1b95cbbbba00bb0bfec4a39d21534 = L.marker(
+                [34.776632, 127.700247],
+                {
+}
+            ).addTo(map_ae851eef1c048e9372124d51418bbf35);
+        
+    
+            var icon_74f9461bf50e784208032b2ea9cef220 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "stop",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96469a0feaabdb39dfdf3ff484c118c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b70457b4d285f17c4e3978319e569ae = $(`<div id="html_6b70457b4d285f17c4e3978319e569ae" style="width: 100.0%; height: 100.0%;">Goal (34.77663, 127.70025)</div>`)[0];
+                popup_96469a0feaabdb39dfdf3ff484c118c3.setContent(html_6b70457b4d285f17c4e3978319e569ae);
+            
+        
+
+        marker_0ce1b95cbbbba00bb0bfec4a39d21534.bindPopup(popup_96469a0feaabdb39dfdf3ff484c118c3)
+        ;
+
+        
+    
+    
+                marker_0ce1b95cbbbba00bb0bfec4a39d21534.setIcon(icon_74f9461bf50e784208032b2ea9cef220);
+            
+    
+            var circle_marker_eea0b11f3ae904f356da5f79287da8d2 = L.circleMarker(
+                [34.7765037, 127.701161],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightgreen", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_ae851eef1c048e9372124d51418bbf35);
+        
+    
+            circle_marker_eea0b11f3ae904f356da5f79287da8d2.bindTooltip(
+                `<div>
+                     Nearest Start Graph Node: 12603363486
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2fd7869effbd2396a422eeff4a167857 = L.circleMarker(
+                [34.7763786, 127.7005357],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_ae851eef1c048e9372124d51418bbf35);
+        
+    
+            circle_marker_2fd7869effbd2396a422eeff4a167857.bindTooltip(
+                `<div>
+                     Nearest Goal Graph Node: 12603418827
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+        function geo_json_b4ef8042666679fa39c10561f81778c7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "gray", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_b4ef8042666679fa39c10561f81778c7_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_b4ef8042666679fa39c10561f81778c7 = L.geoJson(null, {
+                onEachFeature: geo_json_b4ef8042666679fa39c10561f81778c7_onEachFeature,
+            
+                style: geo_json_b4ef8042666679fa39c10561f81778c7_styler,
+            ...{
+}
+        });
+
+        function geo_json_b4ef8042666679fa39c10561f81778c7_add (data) {
+            geo_json_b4ef8042666679fa39c10561f81778c7
+                .addData(data);
+        }
+            geo_json_b4ef8042666679fa39c10561f81778c7_add({"bbox": [127.6973085, 34.7742572, 127.7040975, 34.7781531], "features": [{"bbox": [127.6988661, 34.7764463, 127.6991651, 34.7767123], "geometry": {"coordinates": [[[127.6988661, 34.7765189], [127.6989763, 34.7764463], [127.6991651, 34.7766397], [127.6990549, 34.7767123], [127.6988661, 34.7765189]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040688)", "properties": {"amenity": null, "building": "university", "name": "\uccad\uacbd\ub9c8\ub8e8 F19\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7018194, 34.7772924, 127.7024608, 34.7779343], "geometry": {"coordinates": [[[127.702275, 34.7779343], [127.7024608, 34.7778276], [127.7020051, 34.7772924], [127.7018194, 34.777399], [127.702275, 34.7779343]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040693)", "properties": {"amenity": null, "building": "university", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.6973085, 34.7754539, 127.6984255, 34.776613], "geometry": {"coordinates": [[[127.6978224, 34.776613], [127.6973085, 34.7756774], [127.6979114, 34.7754539], [127.6984255, 34.7763895], [127.6978224, 34.776613]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040694)", "properties": {"amenity": null, "building": "university", "name": "\ud574\uc548\ud56d\ub9cc\uc2e4\ud5d8\uc13c\ud130", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.701394, 34.7775748, 127.7022511, 34.7781531], "geometry": {"coordinates": [[[127.701394, 34.7776689], [127.70156, 34.7775748], [127.7018028, 34.7778639], [127.7019893, 34.7777582], [127.702077, 34.7778626], [127.7021489, 34.7778219], [127.7022511, 34.7779436], [127.7021011, 34.7780285], [127.7020408, 34.7779567], [127.7019021, 34.7780352], [127.7019365, 34.7780761], [127.7018005, 34.7781531], [127.701394, 34.7776689]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040695)", "properties": {"amenity": null, "building": "university", "name": "\uc774\uacf5\ud559\uc2e4\uc2b5\uad00 F12\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7008157, 34.7769842, 127.7016225, 34.7776963], "geometry": {"coordinates": [[[127.7008157, 34.7775565], [127.7013177, 34.7772525], [127.7011743, 34.7770928], [127.7013537, 34.7769842], [127.7016225, 34.7772836], [127.7009411, 34.7776963], [127.7008157, 34.7775565]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040696)", "properties": {"amenity": null, "building": "university", "name": "\uc81c3\uacf5\ud559\uad00 F18\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7005689, 34.7762359, 127.7011882, 34.7770687], "geometry": {"coordinates": [[[127.7005843, 34.776928], [127.700891, 34.7767419], [127.7005689, 34.7763839], [127.7008126, 34.7762359], [127.7009192, 34.7763544], [127.7008461, 34.7763988], [127.7011882, 34.7767789], [127.700711, 34.7770687], [127.7005843, 34.776928]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040697)", "properties": {"amenity": null, "building": "university", "name": "\uc81c2\uacf5\ud559\uad00 F17\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.6997263, 34.776439, 127.7005579, 34.7772598], "geometry": {"coordinates": [[[127.6997263, 34.7765635], [127.6999315, 34.776439], [127.7005579, 34.7771351], [127.7003525, 34.7772598], [127.6997263, 34.7765635]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040698)", "properties": {"amenity": null, "building": "university", "name": "\uc81c1\uacf5\ud559\uad00 F16\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.6991275, 34.7758435, 127.6998022, 34.7764563], "geometry": {"coordinates": [[[127.6991275, 34.7759829], [127.699591, 34.7764563], [127.6998022, 34.7763168], [127.6993387, 34.7758435], [127.6991275, 34.7759829]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040699)", "properties": {"amenity": null, "building": "university", "name": "\uc774\ud559\uad00 F13\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.700108, 34.7754508, 127.7008847, 34.775937], "geometry": {"coordinates": [[[127.7002937, 34.7754508], [127.700108, 34.7755588], [127.7004339, 34.775937], [127.7008847, 34.775675], [127.7007584, 34.7755284], [127.7004934, 34.7756824], [127.7002937, 34.7754508]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040701)", "properties": {"amenity": null, "building": "university", "name": "\uc0b0\ud559\uc5f0\uad6c\uad00 F05\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.69868, 34.775042, 127.6991459, 34.7754671], "geometry": {"coordinates": [[[127.6988606, 34.775042], [127.69868, 34.7751525], [127.6989653, 34.7754671], [127.6991459, 34.7753565], [127.6988606, 34.775042]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040704)", "properties": {"amenity": null, "building": "university", "name": "\ub300\ud559\ubcf8\ubd80 F02\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.6975492, 34.7742572, 127.6981082, 34.7748164], "geometry": {"coordinates": [[[127.6975492, 34.7742857], [127.6975697, 34.7742854], [127.6975986, 34.7742656], [127.6976381, 34.7742604], [127.6976775, 34.7742654], [127.6977099, 34.7742834], [127.6979534, 34.77428], [127.6979741, 34.774264], [127.6980109, 34.7742572], [127.6980429, 34.7742616], [127.6980657, 34.7742785], [127.6980977, 34.774278], [127.6981082, 34.7747884], [127.6980659, 34.774789], [127.6980335, 34.7748053], [127.697995, 34.7748102], [127.6979526, 34.7748069], [127.697924, 34.774791], [127.6977037, 34.774794], [127.6976752, 34.7748122], [127.6976406, 34.7748164], [127.6976036, 34.7748124], [127.697582, 34.7747957], [127.6975597, 34.7747961], [127.6975492, 34.7742857]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040707)", "properties": {"amenity": null, "building": "university", "name": "\uccb4\uc721\uad00 F20\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.6978559, 34.7766824, 127.6982661, 34.7772901], "geometry": {"coordinates": [[[127.6978559, 34.7767216], [127.6979661, 34.7766824], [127.6982661, 34.7772509], [127.6981558, 34.7772901], [127.6978559, 34.7767216]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040708)", "properties": {"amenity": null, "building": "dormitory", "name": "\uc5f4\ub9b0\ud559\uc0ac F06\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.6983566, 34.7773982, 127.6990517, 34.7776932], "geometry": {"coordinates": [[[127.6983566, 34.777486], [127.6983906, 34.7773982], [127.6990517, 34.7775711], [127.6990138, 34.7776689], [127.6988471, 34.7776932], [127.6986812, 34.7776655], [127.6986296, 34.7776202], [127.6984392, 34.777565], [127.6983566, 34.777486]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 542040709)", "properties": {"amenity": null, "building": "dormitory", "name": "\ud478\ub978\ud559\uc0ac F07\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7015403, 34.7750631, 127.7019677, 34.7754915], "geometry": {"coordinates": [[[127.7015403, 34.7752058], [127.7017488, 34.7754915], [127.7019677, 34.7753837], [127.7018737, 34.775255], [127.7019448, 34.77522], [127.7018303, 34.7750631], [127.7015403, 34.7752058]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1164505131)", "properties": {"amenity": null, "building": "university", "name": "\ud30c\uc6cc\ud50c\ub79c\ud2b8 F22\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.699432, 34.775257, 127.7002139, 34.7757739], "geometry": {"coordinates": [[[127.699432, 34.7756299], [127.7000937, 34.775257], [127.7002139, 34.7754009], [127.6995523, 34.7757739], [127.699432, 34.7756299]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361374820)", "properties": {"amenity": null, "building": "university", "name": "\uc218\uc0b0\ud574\uc591\ub300\ud559 F08\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7020327, 34.7745145, 127.7022795, 34.7747209], "geometry": {"coordinates": [[[127.7020327, 34.7745765], [127.7020965, 34.7745412], [127.7020893, 34.7745325], [127.7021218, 34.7745145], [127.7021443, 34.7745419], [127.7021764, 34.7745241], [127.7022795, 34.7746498], [127.7021511, 34.7747209], [127.7020327, 34.7745765]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361386566)", "properties": {"amenity": null, "building": "residential", "name": "\uc5b4\uc6b8\ub9bc A\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7021914, 34.774709, 127.7024229, 34.7749245], "geometry": {"coordinates": [[[127.7023098, 34.7749245], [127.7023736, 34.7748891], [127.7023807, 34.7748978], [127.7024132, 34.7748799], [127.7023907, 34.7748525], [127.7024229, 34.7748347], [127.7023198, 34.774709], [127.7021914, 34.7747801], [127.7023098, 34.7749245]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361386567)", "properties": {"amenity": null, "building": "residential", "name": "\uc5b4\uc6b8\ub9bc B\ub3d9", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7026622, 34.7747131, 127.7028337, 34.7748571], "geometry": {"coordinates": [[[127.7027408, 34.7747131], [127.7027708, 34.7747137], [127.7027704, 34.7747274], [127.7028337, 34.7747288], [127.7028297, 34.7748571], [127.7027338, 34.7748551], [127.7027345, 34.7748337], [127.7026622, 34.7748322], [127.7026639, 34.7747751], [127.7027388, 34.7747767], [127.7027408, 34.7747131]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108855)", "properties": {"amenity": null, "building": "yes", "name": "\uba85\ubb38\ud558\uc219", "religion": null, "tourism": "hostel"}, "type": "Feature"}, {"bbox": [127.7027037, 34.7749119, 127.7029065, 34.7750382], "geometry": {"coordinates": [[[127.7027037, 34.7749125], [127.70287, 34.7749119], [127.7028701, 34.7749469], [127.7029061, 34.7749467], [127.7029065, 34.7750376], [127.7027043, 34.7750382], [127.7027037, 34.7749125]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108856)", "properties": {"amenity": null, "building": "yes", "name": "\ud48d\uacbd\ucc44\ube4c\ub77c", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.702723, 34.7750859, 127.7028731, 34.7752119], "geometry": {"coordinates": [[[127.7027246, 34.7751029], [127.7027647, 34.7751033], [127.7027649, 34.7750859], [127.7028472, 34.7750868], [127.702847, 34.7751028], [127.7028731, 34.775103], [127.7028716, 34.7752119], [127.702723, 34.7752104], [127.7027246, 34.7751029]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108857)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.703033, 34.7749558, 127.7031561, 34.7751889], "geometry": {"coordinates": [[[127.703033, 34.7751877], [127.7030446, 34.7749558], [127.7031248, 34.7749585], [127.7031229, 34.7749966], [127.7031385, 34.7749971], [127.7031347, 34.7750727], [127.7031561, 34.7750734], [127.7031532, 34.7751325], [127.7031377, 34.775132], [127.7031357, 34.7751709], [127.703069, 34.7751686], [127.703068, 34.7751889], [127.703033, 34.7751877]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108858)", "properties": {"amenity": null, "building": "yes", "name": "\ub354\uc232\ube4c\ub77c", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7027081, 34.775288, 127.7028625, 34.7754367], "geometry": {"coordinates": [[[127.7027088, 34.7754367], [127.7027081, 34.7753142], [127.7027248, 34.7753142], [127.7027247, 34.7753017], [127.7027582, 34.7753015], [127.7027581, 34.7752881], [127.7027943, 34.775288], [127.7027943, 34.7752987], [127.7028617, 34.7752984], [127.7028625, 34.7754349], [127.7027959, 34.7754352], [127.7027958, 34.775421], [127.7027313, 34.7754213], [127.7027314, 34.7754366], [127.7027088, 34.7754367]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108859)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7030436, 34.7752245, 127.7032668, 34.7754122], "geometry": {"coordinates": [[[127.7030674, 34.7753077], [127.703198, 34.7752245], [127.7032668, 34.7752974], [127.7030864, 34.7754122], [127.7030436, 34.7753669], [127.7030934, 34.7753352], [127.7030674, 34.7753077]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108860)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7029262, 34.7754061, 127.703071, 34.775515], "geometry": {"coordinates": [[[127.7029262, 34.7754699], [127.7030298, 34.7754061], [127.703071, 34.7754512], [127.7029675, 34.775515], [127.7029262, 34.7754699]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108861)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.703293, 34.7751113, 127.7033684, 34.7751987], "geometry": {"coordinates": [[[127.703293, 34.775118], [127.7033554, 34.7751113], [127.7033684, 34.7751919], [127.7033059, 34.7751987], [127.703293, 34.775118]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108863)", "properties": {"amenity": "townhall", "building": "yes", "name": "\uc2e0\uc8fc\ub9c8\uc744\ud68c\uad00", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.703351, 34.7750443, 127.7035413, 34.7752614], "geometry": {"coordinates": [[[127.703351, 34.7750443], [127.7034381, 34.7750684], [127.7035244, 34.7750583], [127.7035413, 34.7752614], [127.7034828, 34.7752614], [127.7033911, 34.7752531], [127.703351, 34.7750443]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108864)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7031855, 34.7748314, 127.7033715, 34.7749853], "geometry": {"coordinates": [[[127.703197, 34.7749758], [127.7031985, 34.7749589], [127.7031898, 34.7749532], [127.7031861, 34.7749475], [127.7031855, 34.7749387], [127.703188, 34.7749322], [127.7031941, 34.7749261], [127.7032013, 34.7749227], [127.7032091, 34.7749202], [127.7032141, 34.774863], [127.7032354, 34.7748642], [127.7032383, 34.7748314], [127.7033715, 34.7748392], [127.7033587, 34.7749853], [127.703197, 34.7749758]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108865)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7033339, 34.7753415, 127.7035456, 34.7755223], "geometry": {"coordinates": [[[127.7033339, 34.7754066], [127.7034335, 34.7753415], [127.7035456, 34.7754571], [127.703446, 34.7755223], [127.7033339, 34.7754066]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108866)", "properties": {"amenity": null, "building": "yes", "name": "\uc96c\uc5bc\ub9ac", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7032015, 34.7754777, 127.7033732, 34.7755803], "geometry": {"coordinates": [[[127.7032041, 34.7755803], [127.7032015, 34.7754967], [127.7032326, 34.7754961], [127.7032321, 34.7754795], [127.7033237, 34.7754777], [127.703324, 34.775488], [127.7033503, 34.7754874], [127.7033505, 34.7754959], [127.7033708, 34.7754955], [127.7033732, 34.7755769], [127.7032041, 34.7755803]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108867)", "properties": {"amenity": null, "building": "yes", "name": "\uce90\uc2ac\uc6d0\ub8f8B", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7032452, 34.7756198, 127.7034169, 34.7757224], "geometry": {"coordinates": [[[127.7032477, 34.7757224], [127.7032452, 34.7756388], [127.7032763, 34.7756382], [127.7032758, 34.7756216], [127.7033673, 34.7756198], [127.7033676, 34.7756301], [127.7033939, 34.7756295], [127.7033942, 34.775638], [127.7034144, 34.7756376], [127.7034169, 34.775719], [127.7032477, 34.7757224]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108868)", "properties": {"amenity": null, "building": "yes", "name": "\uce90\uc2ac\uc6d0\ub8f8A", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7030623, 34.7755159, 127.7031878, 34.775657], "geometry": {"coordinates": [[[127.7031835, 34.7755159], [127.7030816, 34.7755181], [127.7030824, 34.7755436], [127.7030623, 34.775544], [127.7030647, 34.7756192], [127.7030772, 34.775619], [127.7030779, 34.7756406], [127.7030882, 34.7756403], [127.7030888, 34.775657], [127.7031878, 34.7756549], [127.7031835, 34.7755159]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108869)", "properties": {"amenity": null, "building": "yes", "name": "\uce90\uc2ac\uc6d0\ub8f8C", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7034876, 34.7756025, 127.7035459, 34.775706], "geometry": {"coordinates": [[[127.703495, 34.775706], [127.7034876, 34.775605], [127.7035385, 34.7756025], [127.7035459, 34.7757035], [127.703495, 34.775706]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108870)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.703282, 34.7757823, 127.7034407, 34.7759204], "geometry": {"coordinates": [[[127.703282, 34.7758745], [127.7033657, 34.7757823], [127.7034407, 34.7758281], [127.703357, 34.7759204], [127.703282, 34.7758745]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108871)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7033292, 34.7758814, 127.7034924, 34.7760464], "geometry": {"coordinates": [[[127.7033292, 34.7759984], [127.7033803, 34.7759733], [127.7033595, 34.7759447], [127.7033987, 34.7759254], [127.7033883, 34.775911], [127.7034487, 34.7758814], [127.7034924, 34.7759414], [127.7034471, 34.7759636], [127.703476, 34.7760033], [127.7033882, 34.7760464], [127.7033727, 34.7760252], [127.703355, 34.7760339], [127.7033292, 34.7759984]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108872)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7030677, 34.7762816, 127.7033903, 34.7763646], "geometry": {"coordinates": [[[127.7030678, 34.7763646], [127.7030677, 34.7762818], [127.7031564, 34.7762816], [127.7031565, 34.7763072], [127.7032098, 34.7763071], [127.7032098, 34.776284], [127.7033902, 34.7762837], [127.7033903, 34.7763331], [127.7033729, 34.7763332], [127.703373, 34.7763641], [127.7030678, 34.7763646]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108873)", "properties": {"amenity": null, "building": "yes", "name": "\uc544\ub760\uc6b8\uc6d0\ub8f8", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7030587, 34.7764239, 127.7033813, 34.7765068], "geometry": {"coordinates": [[[127.7030589, 34.7765068], [127.7030587, 34.776424], [127.7031475, 34.7764239], [127.7031475, 34.7764494], [127.7032009, 34.7764493], [127.7032008, 34.7764262], [127.7033812, 34.7764259], [127.7033813, 34.7764754], [127.703364, 34.7764754], [127.703364, 34.7765064], [127.7030589, 34.7765068]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108874)", "properties": {"amenity": null, "building": "yes", "name": "\ud55c\ube5b\ud558\uc6b0\uc2a4", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7030355, 34.7765662, 127.703325, 34.7766467], "geometry": {"coordinates": [[[127.7030355, 34.7766446], [127.7030364, 34.7765679], [127.7031143, 34.7765685], [127.7031141, 34.7765832], [127.7031616, 34.7765836], [127.7031618, 34.7765662], [127.703325, 34.7765674], [127.7033241, 34.7766467], [127.7030355, 34.7766446]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108875)", "properties": {"amenity": null, "building": "yes", "name": "\uccab\uc0ac\ub791\ube4c\ub77c", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7030064, 34.7767429, 127.703286, 34.7768189], "geometry": {"coordinates": [[[127.7030064, 34.7768181], [127.7030068, 34.7767429], [127.703286, 34.7767438], [127.7032857, 34.7767925], [127.7032468, 34.7768189], [127.7030064, 34.7768181]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108876)", "properties": {"amenity": null, "building": "yes", "name": "\ucea0\ud37c\uc2a4\ube4c", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7034066, 34.7767666, 127.7035674, 34.7769159], "geometry": {"coordinates": [[[127.7034066, 34.7768616], [127.7035087, 34.7767666], [127.7035674, 34.776809], [127.7035472, 34.7768971], [127.7034815, 34.7769159], [127.7034066, 34.7768616]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108877)", "properties": {"amenity": null, "building": "yes", "name": "\ud574\uc1a1\uc6d0\ub8f8\ud615\ud558\uc219", "religion": null, "tourism": "guest_house"}, "type": "Feature"}, {"bbox": [127.7033313, 34.7769065, 127.7034973, 34.7770319], "geometry": {"coordinates": [[[127.7033313, 34.7769922], [127.7033713, 34.7769065], [127.7034973, 34.7769462], [127.7034572, 34.7770319], [127.7033313, 34.7769922]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108878)", "properties": {"amenity": null, "building": "yes", "name": "\ud574\uc1a1\uc6d0\ub8f8B", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7030036, 34.7771294, 127.7032856, 34.7772491], "geometry": {"coordinates": [[[127.7030036, 34.7771411], [127.7032817, 34.7771294], [127.7032856, 34.777193], [127.703259, 34.7771941], [127.7032618, 34.7772395], [127.7030347, 34.7772491], [127.7030313, 34.7771951], [127.703007, 34.7771961], [127.7030036, 34.7771411]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108879)", "properties": {"amenity": null, "building": "yes", "name": "\ud574\ub9d0\uae08\ud558\uc6b0\uc2a4", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7029958, 34.7773222, 127.7032151, 34.777432], "geometry": {"coordinates": [[[127.7029986, 34.777432], [127.7029958, 34.777326], [127.7032141, 34.7773222], [127.7032151, 34.7773607], [127.703193, 34.7773611], [127.7031933, 34.7773725], [127.7031802, 34.7773822], [127.7031432, 34.777383], [127.7031439, 34.7774075], [127.7031213, 34.7774161], [127.7030638, 34.7774172], [127.7030641, 34.7774308], [127.7029986, 34.777432]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108880)", "properties": {"amenity": null, "building": "yes", "name": "\ub354\uc870\uc740\ube4c", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7036665, 34.7771152, 127.7038727, 34.7772184], "geometry": {"coordinates": [[[127.7036678, 34.7771152], [127.703837, 34.7771183], [127.7038727, 34.777142], [127.7037978, 34.7772184], [127.7037157, 34.7771641], [127.7036665, 34.7771632], [127.7036678, 34.7771152]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108881)", "properties": {"amenity": null, "building": "yes", "name": "\ud558\ub828\uc194\ube4c\ub9ac\uc9c0", "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7036621, 34.7775249, 127.703901, 34.7776929], "geometry": {"coordinates": [[[127.7036621, 34.7776286], [127.7037748, 34.7775249], [127.703901, 34.7776175], [127.7038486, 34.7776657], [127.7038298, 34.7776519], [127.7038136, 34.7776668], [127.7038046, 34.7776602], [127.7037826, 34.7776804], [127.7037719, 34.7776726], [127.7037498, 34.7776929], [127.7036621, 34.7776286]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108884)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7032186, 34.7776916, 127.7035652, 34.7778686], "geometry": {"coordinates": [[[127.7032186, 34.7777815], [127.7032405, 34.7777436], [127.7032586, 34.7777506], [127.7032927, 34.7776916], [127.7035652, 34.7777979], [127.7035243, 34.7778686], [127.7032912, 34.7777777], [127.7032761, 34.7778039], [127.7032186, 34.7777815]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108885)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7037874, 34.7759217, 127.7040975, 34.776178], "geometry": {"coordinates": [[[127.7037874, 34.7760832], [127.7039748, 34.7759217], [127.704018, 34.7759554], [127.7040451, 34.7759321], [127.7040888, 34.7759663], [127.7040633, 34.7759883], [127.7040975, 34.7760151], [127.7039085, 34.776178], [127.7037874, 34.7760832]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108886)", "properties": {"amenity": "place_of_worship", "building": "yes", "name": "\uc548\ub514\uc625\uad50\ud68c", "religion": "christian", "tourism": null}, "type": "Feature"}, {"bbox": [127.7037151, 34.7754727, 127.7039556, 34.7756827], "geometry": {"coordinates": [[[127.7037161, 34.77564], [127.7037151, 34.7755567], [127.7038187, 34.7755558], [127.7038936, 34.7754727], [127.7039556, 34.7755104], [127.7038756, 34.7755992], [127.7038766, 34.7756818], [127.7037649, 34.7756827], [127.7037643, 34.7756396], [127.7037161, 34.77564]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108892)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}, {"bbox": [127.7037323, 34.7753378, 127.7038809, 34.7754737], "geometry": {"coordinates": [[[127.7037323, 34.7754364], [127.703815, 34.7753378], [127.7038809, 34.7753751], [127.7037983, 34.7754737], [127.7037323, 34.7754364]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1363108893)", "properties": {"amenity": null, "building": "yes", "name": null, "religion": null, "tourism": null}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_b4ef8042666679fa39c10561f81778c7.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["name", "building"];
+    let aliases = ["Name:", "Type:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": false,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_b4ef8042666679fa39c10561f81778c7.addTo(map_ae851eef1c048e9372124d51418bbf35);
+        
+    
+        function geo_json_c311a096073e59650754d2d14225d88e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "green", "fillColor": "darkgreen", "fillOpacity": 0.4, "weight": 1};
+            }
+        }
+
+        function geo_json_c311a096073e59650754d2d14225d88e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_c311a096073e59650754d2d14225d88e = L.geoJson(null, {
+                onEachFeature: geo_json_c311a096073e59650754d2d14225d88e_onEachFeature,
+            
+                style: geo_json_c311a096073e59650754d2d14225d88e_styler,
+            ...{
+}
+        });
+
+        function geo_json_c311a096073e59650754d2d14225d88e_add (data) {
+            geo_json_c311a096073e59650754d2d14225d88e
+                .addData(data);
+        }
+            geo_json_c311a096073e59650754d2d14225d88e_add({"bbox": [127.6990778, 34.7716046, 127.7157082, 34.7841433], "features": [{"bbox": [127.7031904, 34.7716046, 127.7157082, 34.7841433], "geometry": {"coordinates": [[[127.7033177, 34.7793442], [127.7034178, 34.7793445], [127.7038647, 34.7792923], [127.704108, 34.7792838], [127.7043231, 34.7797379], [127.7040684, 34.7798652], [127.7039793, 34.7796615], [127.7036101, 34.7797252], [127.7034155, 34.7802708], [127.7033452, 34.7806912], [127.7032627, 34.781246], [127.7035707, 34.7812511], [127.7038224, 34.7814138], [127.7041448, 34.7812658], [127.7043104, 34.7811894], [127.704756, 34.7814822], [127.7048451, 34.7818769], [127.7047687, 34.7821061], [127.7041321, 34.7823989], [127.7034955, 34.7825645], [127.7032557, 34.7827219], [127.7031904, 34.7828254], [127.7034781, 34.7831932], [127.7039734, 34.7835675], [127.7043996, 34.7837527], [127.7048779, 34.7837018], [127.7052271, 34.7835194], [127.7052614, 34.7834072], [127.7057629, 34.7833199], [127.7063646, 34.7835836], [127.706752, 34.7835248], [127.7070732, 34.7835448], [127.7074297, 34.7834684], [127.7074425, 34.7837995], [127.7076462, 34.7838886], [127.7079008, 34.7839395], [127.7082191, 34.7841433], [127.7084776, 34.7841059], [127.7086349, 34.7839096], [127.7089043, 34.7833908], [127.7088594, 34.7824773], [127.709034, 34.7819533], [127.7095051, 34.7814822], [127.7098683, 34.7815092], [127.7100753, 34.7819073], [127.7105109, 34.7821717], [127.7108874, 34.7819259], [127.7107529, 34.781635], [127.7109948, 34.7813676], [127.7120133, 34.7808711], [127.7127264, 34.7802981], [127.7132229, 34.7798016], [127.7137959, 34.7791649], [127.7142415, 34.7785411], [127.7146871, 34.7781209], [127.7150564, 34.7775607], [127.7153492, 34.7772042], [127.715502, 34.7766567], [127.7156038, 34.7756254], [127.7155911, 34.774645], [127.7157082, 34.7738829], [127.7153135, 34.7734755], [127.7150646, 34.7738981], [127.7151038, 34.7740425], [127.7150436, 34.7742248], [127.7146998, 34.7745304], [127.7145345, 34.7745595], [127.7145116, 34.7748244], [127.7145707, 34.7750485], [127.7147727, 34.775697], [127.7144489, 34.7766939], [127.7142835, 34.7768121], [127.7140367, 34.7768636], [127.7136526, 34.7767926], [127.713543, 34.7766772], [127.7133676, 34.7763605], [127.713152, 34.7760202], [127.7131373, 34.7757405], [127.7132214, 34.7754676], [127.7131681, 34.7753058], [127.7129761, 34.7750561], [127.7126223, 34.7750429], [127.7122381, 34.7750583], [127.7119402, 34.7749623], [127.7120435, 34.774735], [127.7123563, 34.7744673], [127.7127624, 34.7740987], [127.7126913, 34.7738792], [127.7124489, 34.7736824], [127.7120684, 34.7734605], [127.7116704, 34.7735308], [127.7114659, 34.7738556], [127.711033, 34.7738556], [127.7106892, 34.7735882], [127.7100908, 34.7730789], [127.7100144, 34.7726715], [127.7096452, 34.7726079], [127.7094414, 34.7723914], [127.7092123, 34.7726715], [127.7086775, 34.7722895], [127.708142, 34.7719796], [127.7060745, 34.7716046], [127.7058517, 34.7716409], [127.7055799, 34.7719052], [127.7053558, 34.7729691], [127.7051568, 34.7732675], [127.7045176, 34.7736963], [127.7042292, 34.773918], [127.7042695, 34.7742495], [127.704933, 34.7748093], [127.7049852, 34.7749888], [127.7043613, 34.7746959], [127.7042085, 34.774836], [127.7041194, 34.7752689], [127.7044067, 34.7764283], [127.7039074, 34.7764309], [127.704043, 34.7768604], [127.7041628, 34.7771829], [127.7040684, 34.7774588], [127.7039793, 34.7777007], [127.703661, 34.7777771], [127.7036041, 34.7781274], [127.7032762, 34.7781274], [127.7033798, 34.7783918], [127.7033881, 34.7785412], [127.703368, 34.7787134], [127.7032465, 34.7789632], [127.7032186, 34.779127], [127.7033177, 34.7793442]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 73557254)", "properties": {"leisure": null, "natural": "wood"}, "type": "Feature"}, {"bbox": [127.6990778, 34.7749737, 127.699302, 34.775192], "geometry": {"coordinates": [[[127.6990778, 34.7750249], [127.6990786, 34.7750126], [127.6990819, 34.7750032], [127.6990964, 34.7749889], [127.6991168, 34.7749764], [127.69913, 34.7749737], [127.6991432, 34.7749747], [127.6991552, 34.774977], [127.6991655, 34.774983], [127.6991719, 34.7749923], [127.6991747, 34.7750022], [127.6991818, 34.7750231], [127.699193, 34.7750457], [127.6992143, 34.7750715], [127.6992438, 34.7750916], [127.6992845, 34.7751141], [127.6992938, 34.7751209], [127.6992997, 34.7751291], [127.699302, 34.77514], [127.6993007, 34.7751508], [127.6992973, 34.7751629], [127.6992895, 34.7751742], [127.6992817, 34.7751828], [127.6992702, 34.7751892], [127.6992569, 34.775192], [127.6992418, 34.7751918], [127.6992204, 34.7751887], [127.6992001, 34.7751809], [127.6991848, 34.7751664], [127.6991716, 34.7751417], [127.6991666, 34.7751225], [127.6991574, 34.7751058], [127.6991411, 34.7750924], [127.6991188, 34.7750824], [127.6990995, 34.7750724], [127.699091, 34.7750643], [127.6990825, 34.7750519], [127.6990786, 34.77504], [127.6990778, 34.7750249]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361374821)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.7007253, 34.7771659, 127.7011156, 34.7774514], "geometry": {"coordinates": [[[127.7007253, 34.7773746], [127.7007436, 34.7773337], [127.7007761, 34.777302], [127.700828, 34.7772728], [127.7008839, 34.7772628], [127.7009184, 34.7772444], [127.7009509, 34.7772185], [127.7009835, 34.777186], [127.7010007, 34.7771701], [127.7010231, 34.7771659], [127.7010678, 34.7771701], [127.7010973, 34.7771768], [127.7011105, 34.7771935], [127.7011156, 34.7772135], [127.7011125, 34.7772436], [127.7011034, 34.7772728], [127.701081, 34.7773028], [127.7009144, 34.777428], [127.7008818, 34.7774414], [127.7008493, 34.7774473], [127.7008137, 34.7774514], [127.7007822, 34.7774456], [127.7007517, 34.7774364], [127.7007304, 34.7774088], [127.7007253, 34.7773746]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381375)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.700298, 34.7765643, 127.7004403, 34.7766953], "geometry": {"coordinates": [[[127.700298, 34.7766194], [127.7003941, 34.7765643], [127.7004403, 34.7766187], [127.700405, 34.776639], [127.7004232, 34.7766605], [127.7003624, 34.7766953], [127.700298, 34.7766194]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381383)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.7004336, 34.776738, 127.7005941, 34.7768487], "geometry": {"coordinates": [[[127.700498, 34.7768487], [127.7005941, 34.7767936], [127.7005479, 34.7767392], [127.7005126, 34.7767594], [127.7004944, 34.776738], [127.7004336, 34.7767728], [127.700498, 34.7768487]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381384)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.7004289, 34.7764887, 127.7005895, 34.7765994], "geometry": {"coordinates": [[[127.7005251, 34.7764887], [127.7004289, 34.7765438], [127.7004752, 34.7765982], [127.7005105, 34.7765779], [127.7005287, 34.7765994], [127.7005895, 34.7765646], [127.7005251, 34.7764887]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381385)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.7005704, 34.7766405, 127.7007128, 34.7767715], "geometry": {"coordinates": [[[127.7007128, 34.7767164], [127.7006166, 34.7767715], [127.7005704, 34.7767171], [127.7006058, 34.7766968], [127.7005875, 34.7766754], [127.7006483, 34.7766405], [127.7007128, 34.7767164]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381386)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.700459, 34.7766269, 127.7005526, 34.7767031], "geometry": {"coordinates": [[[127.700459, 34.7766585], [127.7005157, 34.7766269], [127.7005526, 34.7766714], [127.7004959, 34.7767031], [127.700459, 34.7766585]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381387)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.7000226, 34.7763076, 127.7003049, 34.7765652], "geometry": {"coordinates": [[[127.7000226, 34.7763808], [127.7001461, 34.7763076], [127.7002967, 34.776479], [127.7003002, 34.7764836], [127.7003029, 34.7764881], [127.7003043, 34.7764933], [127.7003049, 34.7764985], [127.7003033, 34.7765042], [127.7003005, 34.7765086], [127.700296, 34.7765136], [127.7002906, 34.7765179], [127.7002205, 34.7765595], [127.7002123, 34.7765632], [127.7002036, 34.7765652], [127.7001954, 34.776565], [127.7001879, 34.7765628], [127.7001805, 34.7765587], [127.7001733, 34.7765524], [127.7000226, 34.7763808]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381388)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.7001978, 34.776206, 127.7004801, 34.7764636], "geometry": {"coordinates": [[[127.7001978, 34.7762792], [127.7003213, 34.776206], [127.7004719, 34.7763775], [127.7004754, 34.776382], [127.7004781, 34.7763865], [127.7004795, 34.7763917], [127.7004801, 34.7763969], [127.7004785, 34.7764026], [127.7004757, 34.7764071], [127.7004712, 34.7764121], [127.7004658, 34.7764164], [127.7003957, 34.7764579], [127.7003875, 34.7764617], [127.7003788, 34.7764636], [127.7003707, 34.7764635], [127.7003631, 34.7764612], [127.7003557, 34.7764572], [127.7003485, 34.7764509], [127.7001978, 34.7762792]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381389)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.6997477, 34.77582, 127.699945, 34.7759464], "geometry": {"coordinates": [[[127.6997548, 34.7758701], [127.6997477, 34.7758527], [127.6997521, 34.775836], [127.6997769, 34.7758214], [127.6998061, 34.77582], [127.6998371, 34.7758389], [127.6999317, 34.7759108], [127.699945, 34.7759261], [127.6999423, 34.7759384], [127.6999238, 34.7759464], [127.6999044, 34.7759438], [127.6998023, 34.7759117], [127.6997751, 34.775897], [127.6997548, 34.7758701]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381392)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.6997455, 34.7759652, 127.7000092, 34.7760923], "geometry": {"coordinates": [[[127.6997464, 34.7759978], [127.6997512, 34.7759868], [127.6997606, 34.7759782], [127.6997774, 34.7759702], [127.6997968, 34.7759678], [127.6998163, 34.7759688], [127.6998281, 34.7759733], [127.6998375, 34.7759797], [127.69988, 34.7759775], [127.69995, 34.7759652], [127.6999639, 34.7759661], [127.6999765, 34.7759702], [127.699988, 34.7759751], [127.6999977, 34.7759826], [127.7000041, 34.7759924], [127.7000079, 34.7760044], [127.7000092, 34.7760262], [127.700009, 34.7760571], [127.7000065, 34.7760665], [127.7000008, 34.7760742], [127.6999937, 34.7760811], [127.6999844, 34.7760865], [127.6999606, 34.7760915], [127.6999358, 34.7760923], [127.6998137, 34.7760865], [127.6998016, 34.7760834], [127.6997906, 34.7760778], [127.699773, 34.7760665], [127.6997606, 34.7760524], [127.6997517, 34.7760383], [127.6997464, 34.7760233], [127.6997455, 34.7760106], [127.6997464, 34.7759978]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381393)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.6998159, 34.7761128, 127.6999355, 34.7761846], "geometry": {"coordinates": [[[127.6998236, 34.7761252], [127.6998325, 34.7761175], [127.6998444, 34.7761141], [127.6999073, 34.7761128], [127.6999217, 34.7761142], [127.6999317, 34.776116], [127.699935, 34.77612], [127.6999355, 34.776133], [127.6999271, 34.7761497], [127.6999167, 34.7761607], [127.6999053, 34.7761704], [127.6998922, 34.7761786], [127.6998775, 34.7761843], [127.6998609, 34.7761846], [127.6998452, 34.7761824], [127.699832, 34.7761758], [127.6998213, 34.7761672], [127.6998173, 34.7761557], [127.6998159, 34.7761446], [127.6998179, 34.7761337], [127.6998236, 34.7761252]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381394)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}, {"bbox": [127.6998545, 34.7757402, 127.7001635, 34.7760233], "geometry": {"coordinates": [[[127.6998545, 34.7757761], [127.6999287, 34.7757402], [127.6999856, 34.7757553], [127.7001635, 34.7759798], [127.7000964, 34.7760233], [127.7000295, 34.7759705], [127.6999268, 34.7758223], [127.6998545, 34.7757761]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1361381395)", "properties": {"leisure": "garden", "natural": null}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_c311a096073e59650754d2d14225d88e.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["leisure"];
+    let aliases = ["Leisure:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": false,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_c311a096073e59650754d2d14225d88e.addTo(map_ae851eef1c048e9372124d51418bbf35);
+        
+    
+            var poly_line_c87c076d731a89de7551a9b83c397a83 = L.polyline(
+                [[34.7765037, 127.701161], [34.7763865, 127.7010563], [34.7762685, 127.7009508], [34.7760876, 127.7003703], [34.7761159, 127.7003232], [34.7763786, 127.7005357]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_ae851eef1c048e9372124d51418bbf35);
+        
+    
+            poly_line_c87c076d731a89de7551a9b83c397a83.bindTooltip(
+                `<div>
+                     A* Path
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_0b321b51496e2ec761501d7a7b986c0c_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_f62d6ded64cea9eeac2ff713e8dc46f3,
+                },
+                overlays :  {
+                    "Buildings" : geo_json_b4ef8042666679fa39c10561f81778c7,
+                    "Gardens/Parks/Green Areas" : geo_json_c311a096073e59650754d2d14225d88e,
+                },
+            };
+            let layer_control_0b321b51496e2ec761501d7a7b986c0c = L.control.layers(
+                layer_control_0b321b51496e2ec761501d7a7b986c0c_layers.base_layers,
+                layer_control_0b321b51496e2ec761501d7a7b986c0c_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_ae851eef1c048e9372124d51418bbf35);
+
+        
+</script>
+</html>
